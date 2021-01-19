@@ -1,11 +1,13 @@
 package lab1;
 
+import org.apache.jena.query.Dataset;
 import org.apache.jena.rdf.model.Model;
 import org.apache.jena.rdf.model.RDFNode;
 import org.apache.jena.rdf.model.Resource;
 import org.apache.jena.rdf.model.Statement;
 import org.apache.jena.rdf.model.StmtIterator;
-import org.apache.jena.util.FileManager;
+import org.apache.jena.riot.RDFDataMgr;
+//import org.apache.jena.util.FileManager;
 
 /**
  * 
@@ -15,9 +17,13 @@ import org.apache.jena.util.FileManager;
 public class LoadRDFGraph {
 	
 	public LoadRDFGraph(String file) {
-		
-		FileManager.get().addLocatorClassLoader(LoadRDFGraph.class.getClassLoader());
-        Model model = FileManager.get().loadModel(file, null, "TURTLE");
+				
+		Dataset a = RDFDataMgr.loadDataset(file);
+		Model model = a.getDefaultModel();
+				
+		//Deprecated
+		//FileManager.g.get().addLocatorClassLoader(LoadRDFGraph.class.getClassLoader());
+        //Model model = FileManager.get().loadModel(file, null, "TURTLE");
 
         StmtIterator iter = model.listStatements();
         
