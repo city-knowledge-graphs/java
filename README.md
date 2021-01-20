@@ -6,4 +6,4 @@
 
 - [Java 8 or higher](https://www.oracle.com/uk/java/technologies/javase-downloads.html)
 - [Maven](https://maven.apache.org/install.html) 
-- Libraries: See pom file 
+- Libraries: [Apache Jena 3.17.0](https://jena.apache.org/index.html) (See pom file)
