@@ -1,0 +1,8 @@
+@prefix city:  <http://www.example.org/university/london/city#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+city:ernesto  a       foaf:Person ;
+        city:teaches  city:inm713 ;
+        foaf:name     "Ernesto Jimenez Ruiz" .
+
+city:inm713  a  city:Module .
