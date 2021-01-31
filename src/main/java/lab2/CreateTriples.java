@@ -36,11 +36,12 @@ public class CreateTriples {
 		//Set prefixes
 		model.setNsPrefix("city", "http://www.example.org/university/london/city#");
 		model.setNsPrefix("foaf", "http://xmlns.com/foaf/0.1/");
+		model.setNsPrefix("dbpo", "https://dbpedia.org/ontology/");
 		
 		
 		String city_ns = "http://www.example.org/university/london/city#";
 		String foaf_ns = "http://xmlns.com/foaf/0.1/";
-		
+		String dbpo_ns = "https://dbpedia.org/ontology/";
 		
 		// create the resources
 		Resource ernesto = model.createResource(city_ns+"ernesto");
@@ -52,13 +53,15 @@ public class CreateTriples {
 		//Special type of resource
 		Property teaches = model.createProperty(city_ns+"teaches");
 		Property name = model.createProperty(foaf_ns+"name");
+		Property year = model.createProperty(dbpo_ns+"year");
 		
 		//Literals
 		Literal name_lit = model.createTypedLiteral("Ernesto Jimenez Ruiz", XSDDatatype.XSDstring);
+		Literal year_lit = model.createTypedLiteral("2021", XSDDatatype.XSDgYear);
 		//Literal d = model.createLiteral("Germany","en");  //lan tag
 		
 		//Blank node
-		//Resource blank =  model.createResource();
+		Resource blank =  model.createResource();
 				
 	    
 		//Adds triples to model
@@ -67,6 +70,11 @@ public class CreateTriples {
 		model.add(ernesto, name, name_lit);
 		model.add(inm713, RDF.type, module);
 		
+		model.add(blank, RDF.type, RDF.Statement);
+		model.add(blank, RDF.subject, ernesto);
+		model.add(blank, RDF.predicate, teaches);
+		model.add(blank, RDF.object, inm713);
+		model.add(blank, year, year_lit);
 		
 		
 		//Create statements or triples
@@ -85,7 +93,7 @@ public class CreateTriples {
 	
 	public static void main(String[] args) {
 		try {
-			new CreateTriples("lab2_jena.ttl");
+			new CreateTriples("lab2_task5.1_jena.ttl");
 		} catch (FileNotFoundException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
