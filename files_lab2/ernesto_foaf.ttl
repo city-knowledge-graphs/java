@@ -3,7 +3,14 @@
 @prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix foaf:  <http://xmlns.com/foaf/0.1/> .
 
-<file:///home/ernesto/git/java/ernesto_foaf.rdf#me>
+<file:///home/ernesto/git/java/files_lab2/ernesto_foaf.rdf>
+        a                     foaf:PersonalProfileDocument ;
+        admin:errorReportsTo  <mailto:leigh@ldodds.com> ;
+        admin:generatorAgent  <http://www.ldodds.com/foaf/foaf-a-matic> ;
+        foaf:maker            <file:///home/ernesto/git/java/files_lab2/ernesto_foaf.rdf#me> ;
+        foaf:primaryTopic     <file:///home/ernesto/git/java/files_lab2/ernesto_foaf.rdf#me> .
+
+<file:///home/ernesto/git/java/files_lab2/ernesto_foaf.rdf#me>
         a                       foaf:Person ;
         foaf:depiction          <https://www.city.ac.uk/__data/assets/image/0003/492915/Ernesto-Jimenez-Ruiz-2-200px.jpg> ;
         foaf:family_name        "Jimenez-Ruiz" ;
@@ -24,10 +31,3 @@
         foaf:title              "Dr" ;
         foaf:workInfoHomepage   <https://www.city.ac.uk/people/academics/ernesto-jimenez-ruiz> ;
         foaf:workplaceHomepage  <https://www.city.ac.uk/people/academics/ernesto-jimenez-ruiz> .
-
-<file:///home/ernesto/git/java/ernesto_foaf.rdf>
-        a                     foaf:PersonalProfileDocument ;
-        admin:errorReportsTo  <mailto:leigh@ldodds.com> ;
-        admin:generatorAgent  <http://www.ldodds.com/foaf/foaf-a-matic> ;
-        foaf:maker            <file:///home/ernesto/git/java/ernesto_foaf.rdf#me> ;
-        foaf:primaryTopic     <file:///home/ernesto/git/java/ernesto_foaf.rdf#me> .

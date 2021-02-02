@@ -93,7 +93,7 @@ public class CreateTriples {
 	
 	public static void main(String[] args) {
 		try {
-			new CreateTriples("lab2_task5.1_jena.ttl");
+			new CreateTriples("files_lab2/lab2_task5.1_jena.ttl");
 		} catch (FileNotFoundException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
