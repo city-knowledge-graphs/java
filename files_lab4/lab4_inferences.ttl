@@ -1,0 +1,53 @@
+@prefix :      <http://city.ac.uk/kg/lab4/> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+
+:Man    a                rdfs:Class ;
+        rdfs:subClassOf  rdfs:Resource , :Person , :Man .
+
+:Woman  a                rdfs:Class ;
+        rdfs:subClassOf  rdfs:Resource , :Person , :Woman .
+
+:Parent  a               rdfs:Class ;
+        rdfs:subClassOf  rdfs:Resource , :Person , :Parent .
+
+:Child  a                rdfs:Class ;
+        rdfs:subClassOf  rdfs:Resource , :Person , :Child .
+
+:isChildOf  a               rdf:Property ;
+        rdfs:domain         :Child ;
+        rdfs:range          :Parent ;
+        rdfs:subPropertyOf  :isChildOf .
+
+:Person  a               rdfs:Class ;
+        rdfs:subClassOf  rdfs:Resource , :Person .
+
+:Ann    a           :Person , rdfs:Resource ;
+        :hasFather  :Carl ;
+        :hasMother  :Juliet ;
+        :hasParent  :Juliet , :Carl .
+
+:hasFather  a               rdf:Property ;
+        rdfs:range          :Father ;
+        rdfs:subPropertyOf  :hasParent , :hasFather .
+
+:Father  a               rdfs:Class ;
+        rdfs:subClassOf  :Man , :Parent , :Father , rdfs:Resource , :Person .
+
+:Mother  a               rdfs:Class ;
+        rdfs:subClassOf  :Woman , :Parent , :Mother , rdfs:Resource , :Person .
+
+:hasParent  a               rdf:Property ;
+        rdfs:domain         :Person ;
+        rdfs:range          :Parent ;
+        rdfs:subPropertyOf  :hasParent .
+
+:hasMother  a               rdf:Property ;
+        rdfs:range          :Mother ;
+        rdfs:subPropertyOf  :hasParent , :hasMother .
+
+rdfs:Resource  rdfs:subClassOf  rdfs:Resource .
+
+:Juliet  a      :Mother , :Parent , :Woman , rdfs:Resource , :Person .
+
+:Carl   a       :Father , :Parent , :Man , :Person , rdfs:Resource .
