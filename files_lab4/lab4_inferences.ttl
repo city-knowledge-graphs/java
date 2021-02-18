@@ -44,7 +44,7 @@ rdf:XMLLiteral  a  rdfs:Datatype , rdfs:Class , rdfs:Resource .
 rdfs:comment  a     rdf:Property , rdfs:Resource ;
         rdfs:range  rdfs:Literal .
 
-rdfs:range  a        rdf:Property , rdfs:Resource ;
+rdfs:range  a        rdfs:Resource , rdf:Property ;
         rdfs:domain  rdf:Property ;
         rdfs:range   rdfs:Class .
 
@@ -139,6 +139,6 @@ rdfs:isDefinedBy  a         rdf:Property , rdfs:Resource ;
 rdfs:seeAlso  a             rdf:Property , rdfs:Resource ;
         rdfs:subPropertyOf  rdfs:seeAlso .
 
-:Juliet  a      :Mother , :Parent , rdfs:Resource , :Person , :Woman .
+:Juliet  a      :Mother , :Parent , :Person , :Woman , rdfs:Resource .
 
-:Carl   a       :Father , :Parent , rdfs:Resource , :Man , :Person .
+:Carl   a       :Father , :Parent , :Man , rdfs:Resource , :Person .
