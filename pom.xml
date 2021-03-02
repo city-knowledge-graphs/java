@@ -38,6 +38,100 @@
 	    <artifactId>slf4j-simple</artifactId>
 	    <version>1.7.30</version>
 	</dependency>
+	
+	
+	  <!-- Version 4 has some incompatibilities with other libraries -->
+	  <dependency>
+	    <groupId>com.opencsv</groupId>
+	    <artifactId>opencsv</artifactId>
+	    <version>3.10</version>
+	 </dependency>
+	
+	
+<dependency>
+	<groupId>com.fasterxml.jackson.core</groupId>
+	<artifactId>jackson-annotations</artifactId>
+	<version>2.11.1</version>
+</dependency>
+<dependency>
+	<groupId>com.fasterxml.jackson.core</groupId>
+	<artifactId>jackson-core</artifactId>
+	<version>2.11.1</version>
+</dependency>
+<dependency>
+	<groupId>com.fasterxml.jackson.core</groupId>
+	<artifactId>jackson-databind</artifactId>
+	<version>2.11.1</version>
+</dependency>
+	
+	 <!-- Google KG -->
+
+    <dependency>
+      <groupId>com.google.apis</groupId>
+      <artifactId>google-api-services-kgsearch</artifactId>
+      <version>v1-rev230-1.25.0</version>
+    </dependency>
+
+	<dependency>
+	    <groupId>com.jayway.jsonpath</groupId>
+	    <artifactId>json-path</artifactId>
+	    <version>2.4.0</version>
+	</dependency>
+    
+    <dependency>
+    	<groupId>com.googlecode.json-simple</groupId>
+	    <artifactId>json-simple</artifactId>
+	    <version>1.1.1</version>
+	</dependency>
+
+        <!-- deeplearning4j-core: contains main functionality and neural networks -->
+        <dependency>
+            <groupId>org.deeplearning4j</groupId>
+            <artifactId>deeplearning4j-core</artifactId>
+            <version>1.0.0-beta7</version>
+        </dependency>
+        
+        <dependency>
+            <groupId>org.deeplearning4j</groupId>
+            <artifactId>deeplearning4j-nlp</artifactId>
+            <version>1.0.0-beta7</version>
+        </dependency>
+
+        <!--
+        ND4J backend: every project needs one of these. The backend defines the hardware on which network training
+        will occur. "nd4j-native-platform" is for CPUs only (for running on all operating systems).
+        -->
+        <dependency>
+            <groupId>org.nd4j</groupId>
+            <artifactId>nd4j-native</artifactId>
+            <version>1.0.0-beta7</version>
+        </dependency>
+
+        <!-- CUDA: to use GPU for training (CUDA) instead of CPU, uncomment this, and remove nd4j-native-platform -->
+        <!-- Requires CUDA to be installed to use. Change the version (8.0, 9.0, 9.1) to change the CUDA version -->
+        <!--
+        <dependency>
+            <groupId>org.nd4j</groupId>
+            <artifactId>nd4j-cuda-9.2-platform</artifactId>
+            <version>${dl4j-master.version}</version>
+        </dependency>
+        -->
+
+        <!-- Optional, but recommended: if you use CUDA, also use CuDNN. To use this, CuDNN must also be installed -->
+        <!-- See: https://deeplearning4j.konduit.ai/config/backends/config-cudnn#using-deeplearning-4-j-with-cudnn -->
+        <!--
+        <dependency>
+            <groupId>org.deeplearning4j</groupId>
+            <artifactId>deeplearning4j-cuda-9.2</artifactId>
+            <version>${dl4j-master.version}</version>
+        </dependency>
+        -->
+
+        <dependency>
+            <groupId>ch.qos.logback</groupId>
+            <artifactId>logback-classic</artifactId>
+            <version>1.2.3</version>
+        </dependency>
     
     
   </dependencies>
