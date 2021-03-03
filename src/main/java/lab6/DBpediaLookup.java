@@ -40,7 +40,8 @@ public class DBpediaLookup extends LookupService{
 	//private final String QueryString = "QueryString";
 	//private final String QueryClass = "QueryClass";
 	
-	private final String REST_URL = "http://akswnc7.informatik.uni-leipzig.de/lookup/api/search?";
+	//private final String REST_URL = "http://akswnc7.informatik.uni-leipzig.de/lookup/api/search?";
+	private final String REST_URL = "http://lookup.dbpedia.org/api/search?";
 	
 	private final String MaxHits = "maxResults";
 	private final String QueryString = "query";
