@@ -10,6 +10,7 @@ public class LexicalSimilarity {
 	public LexicalSimilarity() {
 		
 		//Reference: https://commons.apache.org/proper/commons-text/apidocs/org/apache/commons/text/similarity/
+		//Another potential library: https://github.com/tdebatty/java-string-similarity
 		
 		JaroWinklerSimilarity jw_sim = new JaroWinklerSimilarity();
 		LevenshteinDistance l_dist = new LevenshteinDistance();
