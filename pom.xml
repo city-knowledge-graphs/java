@@ -139,6 +139,13 @@
 		    <artifactId>commons-text</artifactId>
 		    <version>1.9</version>
 		</dependency>
+		
+		<!-- Required otherwise jena cannot find org/apache/commons/codec/digest/MurmurHash3 -->
+		<dependency>
+    		<groupId>commons-codec</groupId>
+    		<artifactId>commons-codec</artifactId>
+    		<version>1.15</version>
+		</dependency>
         
     
     
