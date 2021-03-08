@@ -417,7 +417,8 @@ public class Lab6_Solution {
             "?city rdf:type lab6:City ." +
             "?city lab6:isCapitalOf ?country ." +
             "?city lab6:population ?pop ." +
-            "FILTER (?pop > xsd:integer(\"5000000\"))" +
+            //"FILTER (?pop > xsd:integer(\"5000000\"))" +
+            "FILTER (xsd:integer(?pop) > 5000000)" +
         "}"+
         "ORDER BY DESC(?pop)";
 
@@ -499,8 +500,8 @@ public class Lab6_Solution {
 			Lab6_Solution solution = new Lab6_Solution(file, column_index);
 			
 			String task;
-			//task = "task3";
-			task = "task4";
+			task = "task3";
+			//task = "task4";
 				    
 			//Create RDF triples
 			if (task.equals("task3"))
