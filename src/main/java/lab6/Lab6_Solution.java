@@ -151,9 +151,9 @@ public class Lab6_Solution {
         
         mappingToCreateLiteralTriple(column_index.get("city_ascii"), column_index.get("admin_name"), labe6_ns_str + "admin_name", XSDDatatype.XSDstring);
         
-        mappingToCreateLiteralTriple(column_index.get("city_ascii"), column_index.get("lat"), labe6_ns_str + "lat", XSDDatatype.XSDfloat);
+        mappingToCreateLiteralTriple(column_index.get("city_ascii"), column_index.get("lat"), labe6_ns_str + "latitude", XSDDatatype.XSDfloat);
         
-        mappingToCreateLiteralTriple(column_index.get("city_ascii"), column_index.get("lng"), labe6_ns_str + "long", XSDDatatype.XSDfloat);
+        mappingToCreateLiteralTriple(column_index.get("city_ascii"), column_index.get("lng"), labe6_ns_str + "longitude", XSDDatatype.XSDfloat);
         
         mappingToCreateLiteralTriple(column_index.get("city_ascii"), column_index.get("population"), labe6_ns_str + "population", XSDDatatype.XSDlong);
             
@@ -514,6 +514,7 @@ public class Lab6_Solution {
 				    
 			//OWL 2 RL reasoning
 			solution.performReasoning("files_lab6/ontology_lab6.ttl");
+			//solution.performReasoning("files_lab6/ontology_lab6.owl");
 				    
 			//#Graph with ontology triples and entailed triples
 			solution.saveGraph(solution.inf_model, file.replace(".csv", "-"+task)+"-reasoning.ttl");
