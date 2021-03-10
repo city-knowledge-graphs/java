@@ -1,4 +1,4 @@
-package lab8;
+package lab7;
 
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
@@ -48,14 +48,14 @@ public class OWLReasoning {
 		
 		
 		//System.out.println("\nChecking entailments: ");
-		//checkEntailments(inf_model);
+		checkEntailments(inf_model);
 		
 		
 		
 		
 		//Storing in RDF/xml
-        //OutputStream out = new FileOutputStream(file_ouput);
-        //RDFDataMgr.write(out, inf_model, RDFFormat.TURTLE);
+        OutputStream out = new FileOutputStream(file_ouput);
+        RDFDataMgr.write(out, inf_model, RDFFormat.TURTLE);
 	}
 	
 	
@@ -64,9 +64,11 @@ public class OWLReasoning {
 		
 		
 		    
-		    String triple1 = "";
+		    String triple1 = ":Carl :hasChild :Ann .";
+		    String triple2 = ":Ann rdf:type :Child .";
 		    
 		    checkEntailment(inf_model, triple1);
+		    checkEntailment(inf_model, triple2);
 		   
 	}
 	
@@ -75,9 +77,10 @@ public class OWLReasoning {
 		
 		 //Query local model
 	    String queryStr =
-	     "PREFIX : <http://city.ac.uk/kg/lab4/>" +
+	     "PREFIX : <http://city.ac.uk/kg/lab7/>" +
 	     "PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>" + 
 	     "PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>" +
+	     "PREFIX owl: <http://www.w3.org/2002/07/owl#>" +
 	     "ASK {" +
 	      triple + 
 	    "}";
@@ -106,7 +109,8 @@ public class OWLReasoning {
 
 		try {
 			
-			new OWLReasoning("http://protege.stanford.edu/ontologies/pizza/pizza.owl", "files_lab8/pizza_inference.ttl");
+			//new OWLReasoning("http://protege.stanford.edu/ontologies/pizza/pizza.owl", "files_lab7/pizza_inference.ttl");
+			new OWLReasoning("files_lab7/lab7.ttl", "files_lab7/lab7_inference.ttl");
 			
 		} catch (FileNotFoundException e) {
 			// TODO Auto-generated catch block
