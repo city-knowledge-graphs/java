@@ -66,9 +66,11 @@ public class OWLReasoning {
 		    
 		    String triple1 = ":Carl :hasChild :Ann .";
 		    String triple2 = ":Ann rdf:type :Child .";
+		    String triple3 = ":Juliet :hasChild :Ann .";
 		    
 		    checkEntailment(inf_model, triple1);
 		    checkEntailment(inf_model, triple2);
+		    checkEntailment(inf_model, triple3);
 		   
 	}
 	

@@ -58,16 +58,6 @@ xsd:negativeInteger  a  <http://www.w3.org/2000/01/rdf-schema#Datatype> , <http:
         <http://www.w3.org/2000/01/rdf-schema#subPropertyOf>
                 <http://www.w3.org/2000/01/rdf-schema#comment> .
 
-_:b0    a       <http://www.w3.org/2000/01/rdf-schema#Class> , <http://www.w3.org/2002/07/owl#Class> , <http://www.w3.org/2002/07/owl#Restriction> , <http://www.w3.org/2000/01/rdf-schema#Resource> ;
-        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
-                <http://www.w3.org/2000/01/rdf-schema#Resource> , _:b0 , <http://www.w3.org/2002/07/owl#Thing> ;
-        <http://www.w3.org/2002/07/owl#equivalentClass>
-                _:b0 ;
-        <http://www.w3.org/2002/07/owl#onProperty>
-                lab6:isFirstLevelAdminCapitalOf ;
-        <http://www.w3.org/2002/07/owl#someValuesFrom>
-                lab6:Country .
-
 lab6:admin_name  a  <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> , <http://www.w3.org/2002/07/owl#DatatypeProperty> , <http://www.w3.org/2000/01/rdf-schema#Resource> ;
         <http://www.w3.org/2000/01/rdf-schema#comment>
                 "Administrative name of a city" ;
@@ -88,9 +78,9 @@ lab6:admin_name  a  <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> , <htt
 lab6:isAdminCapitalOf
         a       <http://www.w3.org/2002/07/owl#FunctionalProperty> , <http://www.w3.org/2002/07/owl#ObjectProperty> , <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> , <http://www.w3.org/2000/01/rdf-schema#Resource> ;
         <http://www.w3.org/2000/01/rdf-schema#domain>
-                <http://www.w3.org/2002/07/owl#Thing> , lab6:AdminCapitalCity , <http://www.w3.org/2000/01/rdf-schema#Resource> , lab6:City , _:b1 ;
+                <http://www.w3.org/2002/07/owl#Thing> , lab6:AdminCapitalCity , <http://www.w3.org/2000/01/rdf-schema#Resource> , lab6:City , _:b0 ;
         <http://www.w3.org/2000/01/rdf-schema#range>
-                <http://www.w3.org/2002/07/owl#Thing> , lab6:Country , <http://www.w3.org/2000/01/rdf-schema#Resource> , _:b2 ;
+                <http://www.w3.org/2002/07/owl#Thing> , lab6:Country , <http://www.w3.org/2000/01/rdf-schema#Resource> , _:b1 ;
         <http://www.w3.org/2000/01/rdf-schema#subPropertyOf>
                 lab6:isLocatedIn , lab6:cityIsLocatedIn , lab6:isAdminCapitalOf ;
         <http://www.w3.org/2002/07/owl#inverseOf>
@@ -118,26 +108,6 @@ xsd:unsignedLong  a  <http://www.w3.org/2000/01/rdf-schema#Datatype> , <http://w
         <http://www.w3.org/2000/01/rdf-schema#subPropertyOf>
                 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> .
 
-_:b2    a       <http://www.w3.org/2000/01/rdf-schema#Class> , <http://www.w3.org/2002/07/owl#Class> , <http://www.w3.org/2002/07/owl#Restriction> , <http://www.w3.org/2000/01/rdf-schema#Resource> ;
-        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
-                <http://www.w3.org/2000/01/rdf-schema#Resource> , _:b2 , <http://www.w3.org/2002/07/owl#Thing> ;
-        <http://www.w3.org/2002/07/owl#equivalentClass>
-                _:b2 ;
-        <http://www.w3.org/2002/07/owl#onProperty>
-                lab6:hasCapital ;
-        <http://www.w3.org/2002/07/owl#someValuesFrom>
-                lab6:City .
-
-_:b3    a       <http://www.w3.org/2000/01/rdf-schema#Class> , <http://www.w3.org/2002/07/owl#Class> , <http://www.w3.org/2002/07/owl#Restriction> , <http://www.w3.org/2000/01/rdf-schema#Resource> ;
-        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
-                <http://www.w3.org/2000/01/rdf-schema#Resource> , _:b3 , <http://www.w3.org/2002/07/owl#Thing> ;
-        <http://www.w3.org/2002/07/owl#equivalentClass>
-                _:b3 ;
-        <http://www.w3.org/2002/07/owl#onProperty>
-                lab6:isSecondLevelAdminCapitalOf ;
-        <http://www.w3.org/2002/07/owl#someValuesFrom>
-                lab6:Country .
-
 <http://www.w3.org/2002/07/owl#onProperty>
         a       <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> , <http://www.w3.org/2000/01/rdf-schema#Resource> ;
         <http://www.w3.org/2000/01/rdf-schema#domain>
@@ -148,7 +118,7 @@ _:b3    a       <http://www.w3.org/2000/01/rdf-schema#Class> , <http://www.w3.or
                 <http://www.w3.org/2002/07/owl#onProperty> .
 
 <http://www.w3.org/2002/07/owl#differentFrom>
-        a       <http://www.w3.org/2002/07/owl#SymmetricProperty> , <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> , <http://www.w3.org/2002/07/owl#ObjectProperty> , <http://www.w3.org/2000/01/rdf-schema#Resource> ;
+        a       <http://www.w3.org/2002/07/owl#SymmetricProperty> , <http://www.w3.org/2002/07/owl#ObjectProperty> , <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> , <http://www.w3.org/2000/01/rdf-schema#Resource> ;
         <http://www.w3.org/2000/01/rdf-schema#subPropertyOf>
                 <http://www.w3.org/2002/07/owl#differentFrom> .
 
@@ -178,7 +148,7 @@ _:b3    a       <http://www.w3.org/2000/01/rdf-schema#Class> , <http://www.w3.or
                 <http://www.w3.org/2002/07/owl#disjointWith> .
 
 <http://www.w3.org/1999/02/22-rdf-syntax-ns#Alt>
-        a       <http://www.w3.org/2000/01/rdf-schema#Class> , <http://www.w3.org/2000/01/rdf-schema#Resource> ;
+        a       <http://www.w3.org/2000/01/rdf-schema#Resource> , <http://www.w3.org/2000/01/rdf-schema#Class> ;
         <http://www.w3.org/2000/01/rdf-schema#subClassOf>
                 <http://www.w3.org/2000/01/rdf-schema#Container> .
 
@@ -197,16 +167,16 @@ lab6:iso2code  a  <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> , <http:
         <http://www.w3.org/2002/07/owl#equivalentClass>
                 <http://www.w3.org/2002/07/owl#Class> .
 
-xsd:duration  a  <http://www.w3.org/2000/01/rdf-schema#Datatype> , <http://www.w3.org/2000/01/rdf-schema#Class> , <http://www.w3.org/2000/01/rdf-schema#Resource> , <http://www.w3.org/2002/07/owl#Class> ;
+xsd:duration  a  <http://www.w3.org/2000/01/rdf-schema#Datatype> , <http://www.w3.org/2000/01/rdf-schema#Resource> , <http://www.w3.org/2000/01/rdf-schema#Class> , <http://www.w3.org/2002/07/owl#Class> ;
         <http://www.w3.org/2002/07/owl#disjointWith>
                 xsd:long , xsd:byte , xsd:unsignedShort , xsd:time , xsd:unsignedLong , xsd:float , xsd:dateTime , xsd:int , xsd:string , xsd:unsignedInt , xsd:short , xsd:nonNegativeInteger , xsd:unsignedByte , xsd:date , xsd:integer , xsd:decimal , xsd:boolean , xsd:nonPositiveInteger .
 
 lab6:isSecondLevelAdminCapitalOf
         a       <http://www.w3.org/2002/07/owl#FunctionalProperty> , <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> , <http://www.w3.org/2002/07/owl#ObjectProperty> , <http://www.w3.org/2002/07/owl#Property> , <http://www.w3.org/2000/01/rdf-schema#Resource> ;
         <http://www.w3.org/2000/01/rdf-schema#domain>
-                <http://www.w3.org/2002/07/owl#Thing> , lab6:SecondLevelAdminCapitalCity , <http://www.w3.org/2000/01/rdf-schema#Resource> , lab6:City , _:b1 , lab6:AdminCapitalCity , _:b3 ;
+                <http://www.w3.org/2002/07/owl#Thing> , lab6:SecondLevelAdminCapitalCity , <http://www.w3.org/2000/01/rdf-schema#Resource> , lab6:City , _:b0 , lab6:AdminCapitalCity , _:b2 ;
         <http://www.w3.org/2000/01/rdf-schema#range>
-                <http://www.w3.org/2002/07/owl#Thing> , lab6:Country , <http://www.w3.org/2000/01/rdf-schema#Resource> , _:b2 ;
+                <http://www.w3.org/2002/07/owl#Thing> , lab6:Country , <http://www.w3.org/2000/01/rdf-schema#Resource> , _:b1 ;
         <http://www.w3.org/2000/01/rdf-schema#subPropertyOf>
                 lab6:isLocatedIn , lab6:cityIsLocatedIn , lab6:isAdminCapitalOf , lab6:isSecondLevelAdminCapitalOf .
 
@@ -225,7 +195,7 @@ lab6:isSecondLevelAdminCapitalOf
                 <http://www.w3.org/1999/02/22-rdf-syntax-ns#Statement> .
 
 <http://www.w3.org/1999/02/22-rdf-syntax-ns#Seq>
-        a       <http://www.w3.org/2000/01/rdf-schema#Resource> , <http://www.w3.org/2000/01/rdf-schema#Class> ;
+        a       <http://www.w3.org/2000/01/rdf-schema#Class> , <http://www.w3.org/2000/01/rdf-schema#Resource> ;
         <http://www.w3.org/2000/01/rdf-schema#subClassOf>
                 <http://www.w3.org/2000/01/rdf-schema#Container> .
 
@@ -251,10 +221,10 @@ xsd:unsignedByte  a  <http://www.w3.org/2000/01/rdf-schema#Datatype> , <http://w
         <http://www.w3.org/2000/01/rdf-schema#subClassOf>
                 <http://www.w3.org/2002/07/owl#ObjectProperty> .
 
-xsd:gMonthDay  a  <http://www.w3.org/2000/01/rdf-schema#Datatype> , <http://www.w3.org/2000/01/rdf-schema#Class> , <http://www.w3.org/2000/01/rdf-schema#Resource> .
+xsd:gMonthDay  a  <http://www.w3.org/2000/01/rdf-schema#Datatype> , <http://www.w3.org/2000/01/rdf-schema#Resource> , <http://www.w3.org/2000/01/rdf-schema#Class> .
 
 <http://www.w3.org/2000/01/rdf-schema#ContainerMembershipProperty>
-        a       <http://www.w3.org/2000/01/rdf-schema#Resource> , <http://www.w3.org/2000/01/rdf-schema#Class> ;
+        a       <http://www.w3.org/2000/01/rdf-schema#Class> , <http://www.w3.org/2000/01/rdf-schema#Resource> ;
         <http://www.w3.org/2000/01/rdf-schema#subClassOf>
                 <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
 
@@ -262,6 +232,16 @@ xsd:gMonthDay  a  <http://www.w3.org/2000/01/rdf-schema#Datatype> , <http://www.
         a       <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> , <http://www.w3.org/2000/01/rdf-schema#Resource> ;
         <http://www.w3.org/2000/01/rdf-schema#subPropertyOf>
                 <http://www.w3.org/2002/07/owl#inverseOf> .
+
+_:b3    a       <http://www.w3.org/2000/01/rdf-schema#Class> , <http://www.w3.org/2002/07/owl#Class> , <http://www.w3.org/2002/07/owl#Restriction> , <http://www.w3.org/2000/01/rdf-schema#Resource> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                _:b3 , <http://www.w3.org/2000/01/rdf-schema#Resource> , <http://www.w3.org/2002/07/owl#Thing> ;
+        <http://www.w3.org/2002/07/owl#equivalentClass>
+                _:b3 ;
+        <http://www.w3.org/2002/07/owl#onProperty>
+                lab6:isFirstLevelAdminCapitalOf ;
+        <http://www.w3.org/2002/07/owl#someValuesFrom>
+                lab6:Country .
 
 <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property>
         a       <http://www.w3.org/2000/01/rdf-schema#Class> , <http://www.w3.org/2000/01/rdf-schema#Resource> , <http://www.w3.org/2002/07/owl#Class> ;
@@ -295,17 +275,7 @@ xsd:unsignedShort  a  <http://www.w3.org/2000/01/rdf-schema#Datatype> , <http://
         <http://www.w3.org/2002/07/owl#equivalentClass>
                 xsd:unsignedShort .
 
-xsd:gDay  a     <http://www.w3.org/2000/01/rdf-schema#Datatype> , <http://www.w3.org/2000/01/rdf-schema#Resource> , <http://www.w3.org/2000/01/rdf-schema#Class> .
-
-_:b1    a       <http://www.w3.org/2000/01/rdf-schema#Class> , <http://www.w3.org/2002/07/owl#Class> , <http://www.w3.org/2002/07/owl#Restriction> , <http://www.w3.org/2000/01/rdf-schema#Resource> ;
-        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
-                <http://www.w3.org/2000/01/rdf-schema#Resource> , _:b1 , <http://www.w3.org/2002/07/owl#Thing> ;
-        <http://www.w3.org/2002/07/owl#equivalentClass>
-                _:b1 ;
-        <http://www.w3.org/2002/07/owl#onProperty>
-                lab6:cityIsLocatedIn ;
-        <http://www.w3.org/2002/07/owl#someValuesFrom>
-                lab6:Country .
+xsd:gDay  a     <http://www.w3.org/2000/01/rdf-schema#Datatype> , <http://www.w3.org/2000/01/rdf-schema#Class> , <http://www.w3.org/2000/01/rdf-schema#Resource> .
 
 <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil>
         a       <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> , <http://www.w3.org/2000/01/rdf-schema#Resource> .
@@ -340,7 +310,7 @@ xsd:boolean  a  <http://www.w3.org/2000/01/rdf-schema#Datatype> , <http://www.w3
         <http://www.w3.org/2000/01/rdf-schema#subClassOf>
                 <http://www.w3.org/2002/07/owl#ObjectProperty> .
 
-xsd:hexBinary  a  <http://www.w3.org/2000/01/rdf-schema#Datatype> , <http://www.w3.org/2000/01/rdf-schema#Class> , <http://www.w3.org/2000/01/rdf-schema#Resource> .
+xsd:hexBinary  a  <http://www.w3.org/2000/01/rdf-schema#Datatype> , <http://www.w3.org/2000/01/rdf-schema#Resource> , <http://www.w3.org/2000/01/rdf-schema#Class> .
 
 <http://www.w3.org/2002/07/owl#oneOf>
         a       <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> , <http://www.w3.org/2000/01/rdf-schema#Resource> ;
@@ -350,19 +320,9 @@ xsd:hexBinary  a  <http://www.w3.org/2000/01/rdf-schema#Datatype> , <http://www.
                 <http://www.w3.org/2002/07/owl#oneOf> .
 
 <http://www.w3.org/1999/02/22-rdf-syntax-ns#Bag>
-        a       <http://www.w3.org/2000/01/rdf-schema#Resource> , <http://www.w3.org/2000/01/rdf-schema#Class> ;
+        a       <http://www.w3.org/2000/01/rdf-schema#Class> , <http://www.w3.org/2000/01/rdf-schema#Resource> ;
         <http://www.w3.org/2000/01/rdf-schema#subClassOf>
                 <http://www.w3.org/2000/01/rdf-schema#Container> .
-
-_:b4    a       <http://www.w3.org/2000/01/rdf-schema#Class> , <http://www.w3.org/2002/07/owl#Class> , <http://www.w3.org/2002/07/owl#Restriction> , <http://www.w3.org/2000/01/rdf-schema#Resource> ;
-        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
-                <http://www.w3.org/2000/01/rdf-schema#Resource> , _:b4 , <http://www.w3.org/2002/07/owl#Thing> ;
-        <http://www.w3.org/2002/07/owl#equivalentClass>
-                _:b4 ;
-        <http://www.w3.org/2002/07/owl#onProperty>
-                lab6:isCapitalOf ;
-        <http://www.w3.org/2002/07/owl#someValuesFrom>
-                lab6:Country .
 
 xsd:decimal  a  <http://www.w3.org/2000/01/rdf-schema#Datatype> , <http://www.w3.org/2000/01/rdf-schema#Class> , <http://www.w3.org/2000/01/rdf-schema#Resource> , <http://www.w3.org/2002/07/owl#Class> ;
         <http://www.w3.org/2002/07/owl#disjointWith>
@@ -386,11 +346,31 @@ lab6:FirstLevelAdminCapitalCity
         <http://www.w3.org/2000/01/rdf-schema#comment>
                 "admin - first-level admin capital (e.g. Little Rock, AR)" ;
         <http://www.w3.org/2000/01/rdf-schema#subClassOf>
-                <http://www.w3.org/2000/01/rdf-schema#Resource> , lab6:FirstLevelAdminCapitalCity , <http://www.w3.org/2002/07/owl#Thing> , _:b0 , lab6:AdminCapitalCity , _:b1 , lab6:City ;
+                lab6:FirstLevelAdminCapitalCity , <http://www.w3.org/2000/01/rdf-schema#Resource> , <http://www.w3.org/2002/07/owl#Thing> , _:b3 , lab6:AdminCapitalCity , _:b0 , lab6:City ;
         <http://www.w3.org/2002/07/owl#equivalentClass>
                 lab6:FirstLevelAdminCapitalCity .
 
-xsd:dateTime  a  <http://www.w3.org/2000/01/rdf-schema#Datatype> , <http://www.w3.org/2000/01/rdf-schema#Class> , <http://www.w3.org/2000/01/rdf-schema#Resource> , <http://www.w3.org/2002/07/owl#Class> ;
+_:b1    a       <http://www.w3.org/2000/01/rdf-schema#Class> , <http://www.w3.org/2002/07/owl#Class> , <http://www.w3.org/2002/07/owl#Restriction> , <http://www.w3.org/2000/01/rdf-schema#Resource> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                _:b1 , <http://www.w3.org/2000/01/rdf-schema#Resource> , <http://www.w3.org/2002/07/owl#Thing> ;
+        <http://www.w3.org/2002/07/owl#equivalentClass>
+                _:b1 ;
+        <http://www.w3.org/2002/07/owl#onProperty>
+                lab6:hasCapital ;
+        <http://www.w3.org/2002/07/owl#someValuesFrom>
+                lab6:City .
+
+_:b4    a       <http://www.w3.org/2000/01/rdf-schema#Class> , <http://www.w3.org/2002/07/owl#Class> , <http://www.w3.org/2002/07/owl#Restriction> , <http://www.w3.org/2000/01/rdf-schema#Resource> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                _:b4 , <http://www.w3.org/2000/01/rdf-schema#Resource> , <http://www.w3.org/2002/07/owl#Thing> ;
+        <http://www.w3.org/2002/07/owl#equivalentClass>
+                _:b4 ;
+        <http://www.w3.org/2002/07/owl#onProperty>
+                lab6:isCapitalOf ;
+        <http://www.w3.org/2002/07/owl#someValuesFrom>
+                lab6:Country .
+
+xsd:dateTime  a  <http://www.w3.org/2000/01/rdf-schema#Datatype> , <http://www.w3.org/2000/01/rdf-schema#Resource> , <http://www.w3.org/2000/01/rdf-schema#Class> , <http://www.w3.org/2002/07/owl#Class> ;
         <http://www.w3.org/2002/07/owl#disjointWith>
                 xsd:long , xsd:byte , xsd:unsignedShort , xsd:time , xsd:unsignedLong , xsd:float , xsd:int , xsd:string , xsd:unsignedInt , xsd:short , xsd:nonNegativeInteger , xsd:duration , xsd:unsignedByte , xsd:date , xsd:integer , xsd:decimal , xsd:boolean , xsd:nonPositiveInteger .
 
@@ -413,14 +393,14 @@ xsd:int  a      <http://www.w3.org/2000/01/rdf-schema#Datatype> , <http://www.w3
         <http://www.w3.org/2000/01/rdf-schema#subPropertyOf>
                 <http://www.w3.org/1999/02/22-rdf-syntax-ns#predicate> .
 
-xsd:gYear  a    <http://www.w3.org/2000/01/rdf-schema#Datatype> , <http://www.w3.org/2000/01/rdf-schema#Resource> , <http://www.w3.org/2000/01/rdf-schema#Class> .
+xsd:gYear  a    <http://www.w3.org/2000/01/rdf-schema#Datatype> , <http://www.w3.org/2000/01/rdf-schema#Class> , <http://www.w3.org/2000/01/rdf-schema#Resource> .
 
 lab6:SecondLevelAdminCapitalCity
         a       <http://www.w3.org/2000/01/rdf-schema#Class> , <http://www.w3.org/2002/07/owl#Class> , <http://www.w3.org/2000/01/rdf-schema#Resource> ;
         <http://www.w3.org/2000/01/rdf-schema#comment>
                 "minor - lower-level admin capital (e.g. Fayetteville, AR)" ;
         <http://www.w3.org/2000/01/rdf-schema#subClassOf>
-                <http://www.w3.org/2002/07/owl#Thing> , <http://www.w3.org/2000/01/rdf-schema#Resource> , lab6:SecondLevelAdminCapitalCity , _:b3 , lab6:AdminCapitalCity , _:b1 , lab6:City ;
+                <http://www.w3.org/2002/07/owl#Thing> , lab6:SecondLevelAdminCapitalCity , <http://www.w3.org/2000/01/rdf-schema#Resource> , _:b2 , lab6:AdminCapitalCity , _:b0 , lab6:City ;
         <http://www.w3.org/2002/07/owl#equivalentClass>
                 lab6:SecondLevelAdminCapitalCity .
 
@@ -440,10 +420,15 @@ lab6:SecondLevelAdminCapitalCity
         <http://www.w3.org/2000/01/rdf-schema#subPropertyOf>
                 <http://www.w3.org/2002/07/owl#incompatibleWith> .
 
-<http://www.w3.org/2002/07/owl#someValuesFrom>
-        a       <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> , <http://www.w3.org/2000/01/rdf-schema#Resource> ;
-        <http://www.w3.org/2000/01/rdf-schema#subPropertyOf>
-                <http://www.w3.org/2002/07/owl#someValuesFrom> .
+_:b2    a       <http://www.w3.org/2000/01/rdf-schema#Class> , <http://www.w3.org/2002/07/owl#Class> , <http://www.w3.org/2002/07/owl#Restriction> , <http://www.w3.org/2000/01/rdf-schema#Resource> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                _:b2 , <http://www.w3.org/2000/01/rdf-schema#Resource> , <http://www.w3.org/2002/07/owl#Thing> ;
+        <http://www.w3.org/2002/07/owl#equivalentClass>
+                _:b2 ;
+        <http://www.w3.org/2002/07/owl#onProperty>
+                lab6:isSecondLevelAdminCapitalOf ;
+        <http://www.w3.org/2002/07/owl#someValuesFrom>
+                lab6:Country .
 
 lab6:pupulation  a  <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> , <http://www.w3.org/2002/07/owl#DatatypeProperty> , <http://www.w3.org/2000/01/rdf-schema#Resource> ;
         <http://www.w3.org/2000/01/rdf-schema#comment>
@@ -453,17 +438,22 @@ lab6:pupulation  a  <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> , <htt
         <http://www.w3.org/2000/01/rdf-schema#subPropertyOf>
                 lab6:pupulation .
 
+<http://www.w3.org/2002/07/owl#someValuesFrom>
+        a       <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> , <http://www.w3.org/2000/01/rdf-schema#Resource> ;
+        <http://www.w3.org/2000/01/rdf-schema#subPropertyOf>
+                <http://www.w3.org/2002/07/owl#someValuesFrom> .
+
 lab6:Country  a  <http://www.w3.org/2000/01/rdf-schema#Class> , <http://www.w3.org/2002/07/owl#Class> , <http://www.w3.org/2000/01/rdf-schema#Resource> ;
         <http://www.w3.org/2000/01/rdf-schema#subClassOf>
-                <http://www.w3.org/2002/07/owl#Thing> , <http://www.w3.org/2000/01/rdf-schema#Resource> , lab6:Country , _:b2 ;
+                <http://www.w3.org/2002/07/owl#Thing> , lab6:Country , <http://www.w3.org/2000/01/rdf-schema#Resource> , _:b1 ;
         <http://www.w3.org/2002/07/owl#equivalentClass>
                 lab6:Country .
 
 lab6:hasCity  a  <http://www.w3.org/2002/07/owl#InverseFunctionalProperty> , <http://www.w3.org/2002/07/owl#ObjectProperty> , <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> , <http://www.w3.org/2000/01/rdf-schema#Resource> ;
         <http://www.w3.org/2000/01/rdf-schema#domain>
-                <http://www.w3.org/2002/07/owl#Thing> , lab6:Country , <http://www.w3.org/2000/01/rdf-schema#Resource> , _:b2 ;
+                <http://www.w3.org/2002/07/owl#Thing> , lab6:Country , <http://www.w3.org/2000/01/rdf-schema#Resource> , _:b1 ;
         <http://www.w3.org/2000/01/rdf-schema#range>
-                <http://www.w3.org/2002/07/owl#Thing> , lab6:City , <http://www.w3.org/2000/01/rdf-schema#Resource> , _:b1 ;
+                <http://www.w3.org/2002/07/owl#Thing> , lab6:City , <http://www.w3.org/2000/01/rdf-schema#Resource> , _:b0 ;
         <http://www.w3.org/2000/01/rdf-schema#subPropertyOf>
                 lab6:hasCity ;
         <http://www.w3.org/2002/07/owl#inverseOf>
@@ -484,9 +474,9 @@ lab6:isLocatedIn  a  <http://www.w3.org/2002/07/owl#ObjectProperty> , <http://ww
 
 lab6:hasCapital  a  <http://www.w3.org/2002/07/owl#InverseFunctionalProperty> , <http://www.w3.org/2002/07/owl#ObjectProperty> , <http://www.w3.org/2002/07/owl#FunctionalProperty> , <http://www.w3.org/2002/07/owl#Property> , <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> , <http://www.w3.org/2000/01/rdf-schema#Resource> ;
         <http://www.w3.org/2000/01/rdf-schema#domain>
-                <http://www.w3.org/2002/07/owl#Thing> , lab6:Country , <http://www.w3.org/2000/01/rdf-schema#Resource> , _:b2 ;
+                <http://www.w3.org/2002/07/owl#Thing> , lab6:Country , <http://www.w3.org/2000/01/rdf-schema#Resource> , _:b1 ;
         <http://www.w3.org/2000/01/rdf-schema#range>
-                <http://www.w3.org/2002/07/owl#Thing> , lab6:CapitalCity , <http://www.w3.org/2000/01/rdf-schema#Resource> , _:b4 , lab6:City , _:b1 ;
+                <http://www.w3.org/2002/07/owl#Thing> , lab6:CapitalCity , <http://www.w3.org/2000/01/rdf-schema#Resource> , _:b4 , lab6:City , _:b0 ;
         <http://www.w3.org/2000/01/rdf-schema#subPropertyOf>
                 lab6:hasCity , lab6:hasCapital ;
         <http://www.w3.org/2002/07/owl#inverseOf>
@@ -527,15 +517,15 @@ lab6:name  a    <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> , <http://
 
 lab6:City  a    <http://www.w3.org/2000/01/rdf-schema#Class> , <http://www.w3.org/2002/07/owl#Class> , <http://www.w3.org/2000/01/rdf-schema#Resource> ;
         <http://www.w3.org/2000/01/rdf-schema#subClassOf>
-                <http://www.w3.org/2000/01/rdf-schema#Resource> , lab6:City , <http://www.w3.org/2002/07/owl#Thing> , _:b1 ;
+                lab6:City , <http://www.w3.org/2000/01/rdf-schema#Resource> , <http://www.w3.org/2002/07/owl#Thing> , _:b0 ;
         <http://www.w3.org/2002/07/owl#equivalentClass>
                 lab6:City .
 
 lab6:isCapitalOf  a  <http://www.w3.org/2002/07/owl#InverseFunctionalProperty> , <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> , <http://www.w3.org/2002/07/owl#ObjectProperty> , <http://www.w3.org/2002/07/owl#FunctionalProperty> , <http://www.w3.org/2002/07/owl#Property> , <http://www.w3.org/2000/01/rdf-schema#Resource> ;
         <http://www.w3.org/2000/01/rdf-schema#domain>
-                <http://www.w3.org/2002/07/owl#Thing> , lab6:CapitalCity , <http://www.w3.org/2000/01/rdf-schema#Resource> , lab6:City , _:b1 , _:b4 ;
+                <http://www.w3.org/2002/07/owl#Thing> , lab6:CapitalCity , <http://www.w3.org/2000/01/rdf-schema#Resource> , lab6:City , _:b0 , _:b4 ;
         <http://www.w3.org/2000/01/rdf-schema#range>
-                <http://www.w3.org/2002/07/owl#Thing> , lab6:Country , <http://www.w3.org/2000/01/rdf-schema#Resource> , _:b2 ;
+                <http://www.w3.org/2002/07/owl#Thing> , lab6:Country , <http://www.w3.org/2000/01/rdf-schema#Resource> , _:b1 ;
         <http://www.w3.org/2000/01/rdf-schema#subPropertyOf>
                 lab6:isLocatedIn , lab6:cityIsLocatedIn , lab6:isCapitalOf ;
         <http://www.w3.org/2002/07/owl#inverseOf>
@@ -551,16 +541,16 @@ lab6:isCapitalOf  a  <http://www.w3.org/2002/07/owl#InverseFunctionalProperty> ,
                 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> .
 
 <http://www.w3.org/2002/07/owl#TransitiveProperty>
-        a       <http://www.w3.org/2000/01/rdf-schema#Resource> , <http://www.w3.org/2000/01/rdf-schema#Class> ;
+        a       <http://www.w3.org/2000/01/rdf-schema#Class> , <http://www.w3.org/2000/01/rdf-schema#Resource> ;
         <http://www.w3.org/2000/01/rdf-schema#subClassOf>
                 <http://www.w3.org/2002/07/owl#ObjectProperty> .
 
 lab6:isFirstLevelAdminCapitalOf
         a       <http://www.w3.org/2002/07/owl#FunctionalProperty> , <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> , <http://www.w3.org/2002/07/owl#ObjectProperty> , <http://www.w3.org/2002/07/owl#Property> , <http://www.w3.org/2000/01/rdf-schema#Resource> ;
         <http://www.w3.org/2000/01/rdf-schema#domain>
-                <http://www.w3.org/2002/07/owl#Thing> , lab6:FirstLevelAdminCapitalCity , <http://www.w3.org/2000/01/rdf-schema#Resource> , lab6:City , _:b1 , lab6:AdminCapitalCity , _:b0 ;
+                <http://www.w3.org/2002/07/owl#Thing> , lab6:FirstLevelAdminCapitalCity , <http://www.w3.org/2000/01/rdf-schema#Resource> , lab6:City , _:b0 , lab6:AdminCapitalCity , _:b3 ;
         <http://www.w3.org/2000/01/rdf-schema#range>
-                <http://www.w3.org/2002/07/owl#Thing> , lab6:Country , <http://www.w3.org/2000/01/rdf-schema#Resource> , _:b2 ;
+                <http://www.w3.org/2002/07/owl#Thing> , lab6:Country , <http://www.w3.org/2000/01/rdf-schema#Resource> , _:b1 ;
         <http://www.w3.org/2000/01/rdf-schema#subPropertyOf>
                 lab6:isLocatedIn , lab6:cityIsLocatedIn , lab6:isAdminCapitalOf , lab6:isFirstLevelAdminCapitalOf .
 
@@ -581,7 +571,7 @@ xsd:short  a    <http://www.w3.org/2000/01/rdf-schema#Datatype> , <http://www.w3
         <http://www.w3.org/2002/07/owl#equivalentClass>
                 xsd:short .
 
-xsd:positiveInteger  a  <http://www.w3.org/2000/01/rdf-schema#Datatype> , <http://www.w3.org/2000/01/rdf-schema#Resource> , <http://www.w3.org/2000/01/rdf-schema#Class> .
+xsd:positiveInteger  a  <http://www.w3.org/2000/01/rdf-schema#Datatype> , <http://www.w3.org/2000/01/rdf-schema#Class> , <http://www.w3.org/2000/01/rdf-schema#Resource> .
 
 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>
         a       <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> , <http://www.w3.org/2000/01/rdf-schema#Resource> ;
@@ -609,7 +599,7 @@ xsd:anyURI  a   <http://www.w3.org/2000/01/rdf-schema#Datatype> , <http://www.w3
 
 xsd:long  a     <http://www.w3.org/2000/01/rdf-schema#Class> , <http://www.w3.org/2000/01/rdf-schema#Datatype> , <http://www.w3.org/2000/01/rdf-schema#Resource> , <http://www.w3.org/2002/07/owl#Class> ;
         <http://www.w3.org/2000/01/rdf-schema#subClassOf>
-                <http://www.w3.org/2000/01/rdf-schema#Resource> , xsd:long , xsd:integer ;
+                xsd:long , <http://www.w3.org/2000/01/rdf-schema#Resource> , xsd:integer ;
         <http://www.w3.org/2002/07/owl#disjointWith>
                 xsd:time , xsd:float , xsd:dateTime , xsd:string , xsd:duration , xsd:date , xsd:boolean ;
         <http://www.w3.org/2002/07/owl#equivalentClass>
@@ -619,9 +609,9 @@ xsd:base64Binary  a  <http://www.w3.org/2000/01/rdf-schema#Datatype> , <http://w
 
 lab6:cityIsLocatedIn  a  <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> , <http://www.w3.org/2002/07/owl#ObjectProperty> , <http://www.w3.org/2002/07/owl#FunctionalProperty> , <http://www.w3.org/2002/07/owl#Property> , <http://www.w3.org/2000/01/rdf-schema#Resource> ;
         <http://www.w3.org/2000/01/rdf-schema#domain>
-                <http://www.w3.org/2002/07/owl#Thing> , lab6:City , <http://www.w3.org/2000/01/rdf-schema#Resource> , _:b1 ;
+                <http://www.w3.org/2002/07/owl#Thing> , lab6:City , <http://www.w3.org/2000/01/rdf-schema#Resource> , _:b0 ;
         <http://www.w3.org/2000/01/rdf-schema#range>
-                <http://www.w3.org/2002/07/owl#Thing> , lab6:Country , <http://www.w3.org/2000/01/rdf-schema#Resource> , _:b2 ;
+                <http://www.w3.org/2002/07/owl#Thing> , lab6:Country , <http://www.w3.org/2000/01/rdf-schema#Resource> , _:b1 ;
         <http://www.w3.org/2000/01/rdf-schema#subPropertyOf>
                 lab6:isLocatedIn , lab6:cityIsLocatedIn ;
         <http://www.w3.org/2002/07/owl#inverseOf>
@@ -675,7 +665,7 @@ xsd:integer  a  <http://www.w3.org/2000/01/rdf-schema#Datatype> , <http://www.w3
         <http://www.w3.org/2002/07/owl#equivalentClass>
                 xsd:integer .
 
-xsd:time  a     <http://www.w3.org/2000/01/rdf-schema#Datatype> , <http://www.w3.org/2000/01/rdf-schema#Class> , <http://www.w3.org/2000/01/rdf-schema#Resource> , <http://www.w3.org/2002/07/owl#Class> ;
+xsd:time  a     <http://www.w3.org/2000/01/rdf-schema#Datatype> , <http://www.w3.org/2000/01/rdf-schema#Resource> , <http://www.w3.org/2000/01/rdf-schema#Class> , <http://www.w3.org/2002/07/owl#Class> ;
         <http://www.w3.org/2002/07/owl#disjointWith>
                 xsd:long , xsd:byte , xsd:unsignedShort , xsd:unsignedLong , xsd:float , xsd:dateTime , xsd:int , xsd:string , xsd:unsignedInt , xsd:short , xsd:nonNegativeInteger , xsd:duration , xsd:unsignedByte , xsd:date , xsd:integer , xsd:decimal , xsd:boolean , xsd:nonPositiveInteger .
 
@@ -688,7 +678,7 @@ xsd:time  a     <http://www.w3.org/2000/01/rdf-schema#Datatype> , <http://www.w3
 
 xsd:float  a    <http://www.w3.org/2000/01/rdf-schema#Class> , <http://www.w3.org/2000/01/rdf-schema#Datatype> , <http://www.w3.org/2000/01/rdf-schema#Resource> , <http://www.w3.org/2002/07/owl#Class> ;
         <http://www.w3.org/2000/01/rdf-schema#subClassOf>
-                <http://www.w3.org/2000/01/rdf-schema#Resource> , xsd:float ;
+                xsd:float , <http://www.w3.org/2000/01/rdf-schema#Resource> ;
         <http://www.w3.org/2002/07/owl#disjointWith>
                 xsd:long , xsd:byte , xsd:unsignedShort , xsd:time , xsd:unsignedLong , xsd:dateTime , xsd:int , xsd:string , xsd:unsignedInt , xsd:short , xsd:nonNegativeInteger , xsd:duration , xsd:unsignedByte , xsd:date , xsd:integer , xsd:decimal , xsd:boolean , xsd:nonPositiveInteger ;
         <http://www.w3.org/2002/07/owl#equivalentClass>
@@ -717,39 +707,49 @@ xsd:nonPositiveInteger
 lab6:AdminCapitalCity
         a       <http://www.w3.org/2000/01/rdf-schema#Class> , <http://www.w3.org/2002/07/owl#Class> , <http://www.w3.org/2000/01/rdf-schema#Resource> ;
         <http://www.w3.org/2000/01/rdf-schema#subClassOf>
-                <http://www.w3.org/2002/07/owl#Thing> , <http://www.w3.org/2000/01/rdf-schema#Resource> , lab6:AdminCapitalCity , lab6:City , _:b1 ;
+                <http://www.w3.org/2002/07/owl#Thing> , lab6:AdminCapitalCity , <http://www.w3.org/2000/01/rdf-schema#Resource> , lab6:City , _:b0 ;
         <http://www.w3.org/2002/07/owl#equivalentClass>
                 lab6:AdminCapitalCity .
 
 lab6:hasAdminCapital  a  <http://www.w3.org/2002/07/owl#InverseFunctionalProperty> , <http://www.w3.org/2002/07/owl#ObjectProperty> , <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> , <http://www.w3.org/2000/01/rdf-schema#Resource> ;
         <http://www.w3.org/2000/01/rdf-schema#domain>
-                <http://www.w3.org/2002/07/owl#Thing> , lab6:Country , <http://www.w3.org/2000/01/rdf-schema#Resource> , _:b2 ;
+                <http://www.w3.org/2002/07/owl#Thing> , lab6:Country , <http://www.w3.org/2000/01/rdf-schema#Resource> , _:b1 ;
         <http://www.w3.org/2000/01/rdf-schema#range>
-                <http://www.w3.org/2002/07/owl#Thing> , lab6:AdminCapitalCity , <http://www.w3.org/2000/01/rdf-schema#Resource> , lab6:City , _:b1 ;
+                <http://www.w3.org/2002/07/owl#Thing> , lab6:AdminCapitalCity , <http://www.w3.org/2000/01/rdf-schema#Resource> , lab6:City , _:b0 ;
         <http://www.w3.org/2000/01/rdf-schema#subPropertyOf>
                 lab6:hasCity , lab6:hasAdminCapital ;
         <http://www.w3.org/2002/07/owl#inverseOf>
                 lab6:isAdminCapitalOf .
 
+_:b0    a       <http://www.w3.org/2000/01/rdf-schema#Class> , <http://www.w3.org/2002/07/owl#Class> , <http://www.w3.org/2002/07/owl#Restriction> , <http://www.w3.org/2000/01/rdf-schema#Resource> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                _:b0 , <http://www.w3.org/2000/01/rdf-schema#Resource> , <http://www.w3.org/2002/07/owl#Thing> ;
+        <http://www.w3.org/2002/07/owl#equivalentClass>
+                _:b0 ;
+        <http://www.w3.org/2002/07/owl#onProperty>
+                lab6:cityIsLocatedIn ;
+        <http://www.w3.org/2002/07/owl#someValuesFrom>
+                lab6:Country .
+
 lab6:CapitalCity  a  <http://www.w3.org/2000/01/rdf-schema#Class> , <http://www.w3.org/2002/07/owl#Class> , <http://www.w3.org/2000/01/rdf-schema#Resource> ;
         <http://www.w3.org/2000/01/rdf-schema#comment>
                 "primary - country's capital (e.g. Washington D.C.)" ;
         <http://www.w3.org/2000/01/rdf-schema#subClassOf>
-                <http://www.w3.org/2000/01/rdf-schema#Resource> , lab6:CapitalCity , <http://www.w3.org/2002/07/owl#Thing> , _:b4 , lab6:City , _:b1 ;
+                lab6:CapitalCity , <http://www.w3.org/2000/01/rdf-schema#Resource> , <http://www.w3.org/2002/07/owl#Thing> , _:b4 , lab6:City , _:b0 ;
         <http://www.w3.org/2002/07/owl#equivalentClass>
                 lab6:CapitalCity .
 
-xsd:gYearMonth  a  <http://www.w3.org/2000/01/rdf-schema#Datatype> , <http://www.w3.org/2000/01/rdf-schema#Resource> , <http://www.w3.org/2000/01/rdf-schema#Class> .
+xsd:gYearMonth  a  <http://www.w3.org/2000/01/rdf-schema#Datatype> , <http://www.w3.org/2000/01/rdf-schema#Class> , <http://www.w3.org/2000/01/rdf-schema#Resource> .
 
 xsd:string  a   <http://www.w3.org/2000/01/rdf-schema#Class> , <http://www.w3.org/2000/01/rdf-schema#Datatype> , <http://www.w3.org/2000/01/rdf-schema#Resource> , <http://www.w3.org/2002/07/owl#Class> ;
         <http://www.w3.org/2000/01/rdf-schema#subClassOf>
-                <http://www.w3.org/2000/01/rdf-schema#Resource> , xsd:string ;
+                xsd:string , <http://www.w3.org/2000/01/rdf-schema#Resource> ;
         <http://www.w3.org/2002/07/owl#disjointWith>
                 xsd:long , xsd:byte , xsd:unsignedShort , xsd:time , xsd:unsignedLong , xsd:float , xsd:dateTime , xsd:int , xsd:unsignedInt , xsd:short , xsd:nonNegativeInteger , xsd:duration , xsd:unsignedByte , xsd:date , xsd:integer , xsd:decimal , xsd:boolean , xsd:nonPositiveInteger ;
         <http://www.w3.org/2002/07/owl#equivalentClass>
                 xsd:string .
 
-lab6:yantai  a                lab6:City , _:b1 , <http://www.w3.org/2002/07/owl#Thing> , <http://www.w3.org/2000/01/rdf-schema#Resource> ;
+lab6:yantai  a                lab6:City , <http://www.w3.org/2002/07/owl#Thing> , <http://www.w3.org/2000/01/rdf-schema#Resource> , _:b0 ;
         lab6:admin_name       "Shandong" ;
         lab6:cityIsLocatedIn  lab6:china ;
         lab6:isLocatedIn      lab6:china ;
@@ -761,7 +761,7 @@ lab6:yantai  a                lab6:City , _:b1 , <http://www.w3.org/2002/07/owl#
         <http://www.w3.org/2002/07/owl#sameAs>
                 lab6:yantai .
 
-lab6:ganzhou  a                lab6:City , lab6:SecondLevelAdminCapitalCity , <http://www.w3.org/2002/07/owl#Thing> , _:b3 , <http://www.w3.org/2000/01/rdf-schema#Resource> , lab6:AdminCapitalCity , _:b1 ;
+lab6:ganzhou  a                lab6:City , lab6:SecondLevelAdminCapitalCity , <http://www.w3.org/2002/07/owl#Thing> , _:b2 , <http://www.w3.org/2000/01/rdf-schema#Resource> , lab6:AdminCapitalCity , _:b0 ;
         lab6:admin_name        "Jiangxi" ;
         lab6:cityIsLocatedIn   lab6:china ;
         lab6:isAdminCapitalOf  lab6:china ;
@@ -776,7 +776,7 @@ lab6:ganzhou  a                lab6:City , lab6:SecondLevelAdminCapitalCity , <h
         <http://www.w3.org/2002/07/owl#sameAs>
                 lab6:ganzhou .
 
-lab6:buenos_aires  a          lab6:City , _:b1 , <http://www.w3.org/2002/07/owl#Thing> , <http://www.w3.org/2000/01/rdf-schema#Resource> , _:b4 , lab6:CapitalCity ;
+lab6:buenos_aires  a          lab6:City , _:b0 , <http://www.w3.org/2002/07/owl#Thing> , <http://www.w3.org/2000/01/rdf-schema#Resource> , lab6:CapitalCity , _:b4 ;
         lab6:admin_name       "Buenos Aires, Ciudad Autónoma de" ;
         lab6:cityIsLocatedIn  lab6:argentina ;
         lab6:isCapitalOf      lab6:argentina ;
@@ -789,7 +789,7 @@ lab6:buenos_aires  a          lab6:City , _:b1 , <http://www.w3.org/2002/07/owl#
         <http://www.w3.org/2002/07/owl#sameAs>
                 lab6:buenos_aires .
 
-lab6:zhoukou  a                lab6:City , lab6:SecondLevelAdminCapitalCity , <http://www.w3.org/2002/07/owl#Thing> , _:b3 , <http://www.w3.org/2000/01/rdf-schema#Resource> , lab6:AdminCapitalCity , _:b1 ;
+lab6:zhoukou  a                lab6:City , lab6:SecondLevelAdminCapitalCity , <http://www.w3.org/2002/07/owl#Thing> , _:b2 , <http://www.w3.org/2000/01/rdf-schema#Resource> , lab6:AdminCapitalCity , _:b0 ;
         lab6:admin_name        "Henan" ;
         lab6:cityIsLocatedIn   lab6:china ;
         lab6:isAdminCapitalOf  lab6:china ;
@@ -804,7 +804,7 @@ lab6:zhoukou  a                lab6:City , lab6:SecondLevelAdminCapitalCity , <h
         <http://www.w3.org/2002/07/owl#sameAs>
                 lab6:zhoukou .
 
-lab6:new_york  a              lab6:City , _:b1 , <http://www.w3.org/2002/07/owl#Thing> , <http://www.w3.org/2000/01/rdf-schema#Resource> ;
+lab6:new_york  a              lab6:City , <http://www.w3.org/2002/07/owl#Thing> , _:b0 , <http://www.w3.org/2000/01/rdf-schema#Resource> ;
         lab6:admin_name       "New York" ;
         lab6:cityIsLocatedIn  lab6:united_states ;
         lab6:isLocatedIn      lab6:united_states ;
@@ -816,7 +816,7 @@ lab6:new_york  a              lab6:City , _:b1 , <http://www.w3.org/2002/07/owl#
         <http://www.w3.org/2002/07/owl#sameAs>
                 lab6:new_york .
 
-lab6:hong_kong  a             lab6:City , lab6:Country , <http://www.w3.org/2000/01/rdf-schema#Resource> , _:b2 , <http://www.w3.org/2002/07/owl#Thing> , _:b1 ;
+lab6:hong_kong  a             lab6:City , lab6:Country , <http://www.w3.org/2000/01/rdf-schema#Resource> , _:b1 , <http://www.w3.org/2002/07/owl#Thing> , _:b0 ;
         lab6:admin_name       "" ;
         lab6:cityIsLocatedIn  lab6:hong_kong ;
         lab6:hasCity          lab6:hong_kong ;
@@ -831,7 +831,7 @@ lab6:hong_kong  a             lab6:City , lab6:Country , <http://www.w3.org/2000
         <http://www.w3.org/2002/07/owl#sameAs>
                 lab6:hong_kong .
 
-lab6:lima  a                  lab6:City , _:b1 , <http://www.w3.org/2002/07/owl#Thing> , <http://www.w3.org/2000/01/rdf-schema#Resource> , lab6:CapitalCity , _:b4 ;
+lab6:lima  a                  lab6:City , _:b0 , <http://www.w3.org/2002/07/owl#Thing> , <http://www.w3.org/2000/01/rdf-schema#Resource> , _:b4 , lab6:CapitalCity ;
         lab6:admin_name       "Lima" ;
         lab6:cityIsLocatedIn  lab6:peru ;
         lab6:isCapitalOf      lab6:peru ;
@@ -844,7 +844,7 @@ lab6:lima  a                  lab6:City , _:b1 , <http://www.w3.org/2002/07/owl#
         <http://www.w3.org/2002/07/owl#sameAs>
                 lab6:lima .
 
-lab6:beijing  a               lab6:City , _:b1 , <http://www.w3.org/2002/07/owl#Thing> , <http://www.w3.org/2000/01/rdf-schema#Resource> , lab6:CapitalCity , _:b4 ;
+lab6:beijing  a               lab6:City , _:b0 , <http://www.w3.org/2002/07/owl#Thing> , <http://www.w3.org/2000/01/rdf-schema#Resource> , _:b4 , lab6:CapitalCity ;
         lab6:admin_name       "Beijing" ;
         lab6:cityIsLocatedIn  lab6:china ;
         lab6:isCapitalOf      lab6:china ;
@@ -857,7 +857,7 @@ lab6:beijing  a               lab6:City , _:b1 , <http://www.w3.org/2002/07/owl#
         <http://www.w3.org/2002/07/owl#sameAs>
                 lab6:beijing .
 
-lab6:ningbo  a                 lab6:City , lab6:SecondLevelAdminCapitalCity , <http://www.w3.org/2002/07/owl#Thing> , _:b3 , <http://www.w3.org/2000/01/rdf-schema#Resource> , lab6:AdminCapitalCity , _:b1 ;
+lab6:ningbo  a                 lab6:City , lab6:SecondLevelAdminCapitalCity , <http://www.w3.org/2002/07/owl#Thing> , _:b2 , <http://www.w3.org/2000/01/rdf-schema#Resource> , lab6:AdminCapitalCity , _:b0 ;
         lab6:admin_name        "Zhejiang" ;
         lab6:cityIsLocatedIn   lab6:china ;
         lab6:isAdminCapitalOf  lab6:china ;
@@ -872,7 +872,7 @@ lab6:ningbo  a                 lab6:City , lab6:SecondLevelAdminCapitalCity , <h
         <http://www.w3.org/2002/07/owl#sameAs>
                 lab6:ningbo .
 
-lab6:kunming  a                lab6:City , _:b0 , lab6:FirstLevelAdminCapitalCity , <http://www.w3.org/2002/07/owl#Thing> , <http://www.w3.org/2000/01/rdf-schema#Resource> , _:b1 , lab6:AdminCapitalCity ;
+lab6:kunming  a                lab6:City , _:b3 , lab6:FirstLevelAdminCapitalCity , <http://www.w3.org/2002/07/owl#Thing> , <http://www.w3.org/2000/01/rdf-schema#Resource> , _:b0 , lab6:AdminCapitalCity ;
         lab6:admin_name        "Yunnan" ;
         lab6:cityIsLocatedIn   lab6:china ;
         lab6:isAdminCapitalOf  lab6:china ;
@@ -887,7 +887,7 @@ lab6:kunming  a                lab6:City , _:b0 , lab6:FirstLevelAdminCapitalCit
         <http://www.w3.org/2002/07/owl#sameAs>
                 lab6:kunming .
 
-lab6:luoyang  a               lab6:City , <http://www.w3.org/2000/01/rdf-schema#Resource> , <http://www.w3.org/2002/07/owl#Thing> , _:b1 ;
+lab6:luoyang  a               lab6:City , <http://www.w3.org/2002/07/owl#Thing> , _:b0 , <http://www.w3.org/2000/01/rdf-schema#Resource> ;
         lab6:admin_name       "Henan" ;
         lab6:cityIsLocatedIn  lab6:china ;
         lab6:isLocatedIn      lab6:china ;
@@ -899,7 +899,7 @@ lab6:luoyang  a               lab6:City , <http://www.w3.org/2000/01/rdf-schema#
         <http://www.w3.org/2002/07/owl#sameAs>
                 lab6:luoyang .
 
-lab6:zhumadian  a             lab6:City , <http://www.w3.org/2002/07/owl#Thing> , _:b1 , <http://www.w3.org/2000/01/rdf-schema#Resource> ;
+lab6:zhumadian  a             lab6:City , <http://www.w3.org/2002/07/owl#Thing> , _:b0 , <http://www.w3.org/2000/01/rdf-schema#Resource> ;
         lab6:admin_name       "Henan" ;
         lab6:cityIsLocatedIn  lab6:china ;
         lab6:isLocatedIn      lab6:china ;
@@ -911,7 +911,7 @@ lab6:zhumadian  a             lab6:City , <http://www.w3.org/2002/07/owl#Thing> 
         <http://www.w3.org/2002/07/owl#sameAs>
                 lab6:zhumadian .
 
-lab6:baoding  a               lab6:City , <http://www.w3.org/2002/07/owl#Thing> , _:b1 , <http://www.w3.org/2000/01/rdf-schema#Resource> ;
+lab6:baoding  a               lab6:City , <http://www.w3.org/2002/07/owl#Thing> , <http://www.w3.org/2000/01/rdf-schema#Resource> , _:b0 ;
         lab6:admin_name       "Hebei" ;
         lab6:cityIsLocatedIn  lab6:china ;
         lab6:isLocatedIn      lab6:china ;
@@ -923,7 +923,7 @@ lab6:baoding  a               lab6:City , <http://www.w3.org/2002/07/owl#Thing> 
         <http://www.w3.org/2002/07/owl#sameAs>
                 lab6:baoding .
 
-lab6:fuyang  a                lab6:City , _:b1 , <http://www.w3.org/2002/07/owl#Thing> , <http://www.w3.org/2000/01/rdf-schema#Resource> ;
+lab6:fuyang  a                lab6:City , <http://www.w3.org/2002/07/owl#Thing> , _:b0 , <http://www.w3.org/2000/01/rdf-schema#Resource> ;
         lab6:admin_name       "Anhui" ;
         lab6:cityIsLocatedIn  lab6:china ;
         lab6:isLocatedIn      lab6:china ;
@@ -935,7 +935,7 @@ lab6:fuyang  a                lab6:City , _:b1 , <http://www.w3.org/2002/07/owl#
         <http://www.w3.org/2002/07/owl#sameAs>
                 lab6:fuyang .
 
-lab6:jakarta  a               lab6:City , _:b1 , <http://www.w3.org/2002/07/owl#Thing> , <http://www.w3.org/2000/01/rdf-schema#Resource> , _:b4 , lab6:CapitalCity ;
+lab6:jakarta  a               lab6:City , _:b0 , <http://www.w3.org/2002/07/owl#Thing> , <http://www.w3.org/2000/01/rdf-schema#Resource> , lab6:CapitalCity , _:b4 ;
         lab6:admin_name       "Jakarta" ;
         lab6:cityIsLocatedIn  lab6:indonesia ;
         lab6:isCapitalOf      lab6:indonesia ;
@@ -948,7 +948,7 @@ lab6:jakarta  a               lab6:City , _:b1 , <http://www.w3.org/2002/07/owl#
         <http://www.w3.org/2002/07/owl#sameAs>
                 lab6:jakarta .
 
-lab6:indonesia  a        lab6:Country , <http://www.w3.org/2000/01/rdf-schema#Resource> , _:b2 , <http://www.w3.org/2002/07/owl#Thing> ;
+lab6:indonesia  a        lab6:Country , <http://www.w3.org/2000/01/rdf-schema#Resource> , _:b1 , <http://www.w3.org/2002/07/owl#Thing> ;
         lab6:hasCapital  lab6:jakarta ;
         lab6:hasCity     lab6:jakarta ;
         lab6:iso2code    "ID" ;
@@ -957,7 +957,7 @@ lab6:indonesia  a        lab6:Country , <http://www.w3.org/2000/01/rdf-schema#Re
         <http://www.w3.org/2002/07/owl#sameAs>
                 lab6:indonesia .
 
-lab6:angola  a           lab6:Country , <http://www.w3.org/2000/01/rdf-schema#Resource> , _:b2 , <http://www.w3.org/2002/07/owl#Thing> ;
+lab6:angola  a           lab6:Country , <http://www.w3.org/2000/01/rdf-schema#Resource> , _:b1 , <http://www.w3.org/2002/07/owl#Thing> ;
         lab6:hasCapital  lab6:luanda ;
         lab6:hasCity     lab6:luanda ;
         lab6:iso2code    "AO" ;
@@ -966,7 +966,7 @@ lab6:angola  a           lab6:Country , <http://www.w3.org/2000/01/rdf-schema#Re
         <http://www.w3.org/2002/07/owl#sameAs>
                 lab6:angola .
 
-lab6:egypt  a            lab6:Country , <http://www.w3.org/2000/01/rdf-schema#Resource> , _:b2 , <http://www.w3.org/2002/07/owl#Thing> ;
+lab6:egypt  a            lab6:Country , <http://www.w3.org/2000/01/rdf-schema#Resource> , _:b1 , <http://www.w3.org/2002/07/owl#Thing> ;
         lab6:hasCapital  lab6:cairo ;
         lab6:hasCity     lab6:cairo ;
         lab6:iso2code    "EG" ;
@@ -975,7 +975,7 @@ lab6:egypt  a            lab6:Country , <http://www.w3.org/2000/01/rdf-schema#Re
         <http://www.w3.org/2002/07/owl#sameAs>
                 lab6:egypt .
 
-lab6:mumbai  a                 lab6:City , _:b0 , lab6:FirstLevelAdminCapitalCity , <http://www.w3.org/2002/07/owl#Thing> , <http://www.w3.org/2000/01/rdf-schema#Resource> , _:b1 , lab6:AdminCapitalCity ;
+lab6:mumbai  a                 lab6:City , _:b3 , lab6:FirstLevelAdminCapitalCity , <http://www.w3.org/2002/07/owl#Thing> , <http://www.w3.org/2000/01/rdf-schema#Resource> , _:b0 , lab6:AdminCapitalCity ;
         lab6:admin_name        "Mahārāshtra" ;
         lab6:cityIsLocatedIn   lab6:india ;
         lab6:isAdminCapitalOf  lab6:india ;
@@ -990,7 +990,7 @@ lab6:mumbai  a                 lab6:City , _:b0 , lab6:FirstLevelAdminCapitalCit
         <http://www.w3.org/2002/07/owl#sameAs>
                 lab6:mumbai .
 
-lab6:sudan  a            lab6:Country , <http://www.w3.org/2000/01/rdf-schema#Resource> , _:b2 , <http://www.w3.org/2002/07/owl#Thing> ;
+lab6:sudan  a            lab6:Country , <http://www.w3.org/2000/01/rdf-schema#Resource> , _:b1 , <http://www.w3.org/2002/07/owl#Thing> ;
         lab6:hasCapital  lab6:khartoum ;
         lab6:hasCity     lab6:khartoum ;
         lab6:iso2code    "SD" ;
@@ -999,7 +999,7 @@ lab6:sudan  a            lab6:Country , <http://www.w3.org/2000/01/rdf-schema#Re
         <http://www.w3.org/2002/07/owl#sameAs>
                 lab6:sudan .
 
-lab6:shangrao  a               lab6:City , lab6:SecondLevelAdminCapitalCity , <http://www.w3.org/2002/07/owl#Thing> , _:b3 , <http://www.w3.org/2000/01/rdf-schema#Resource> , lab6:AdminCapitalCity , _:b1 ;
+lab6:shangrao  a               lab6:City , lab6:SecondLevelAdminCapitalCity , <http://www.w3.org/2002/07/owl#Thing> , _:b2 , <http://www.w3.org/2000/01/rdf-schema#Resource> , lab6:AdminCapitalCity , _:b0 ;
         lab6:admin_name        "Jiangxi" ;
         lab6:cityIsLocatedIn   lab6:china ;
         lab6:isAdminCapitalOf  lab6:china ;
@@ -1014,7 +1014,7 @@ lab6:shangrao  a               lab6:City , lab6:SecondLevelAdminCapitalCity , <h
         <http://www.w3.org/2002/07/owl#sameAs>
                 lab6:shangrao .
 
-lab6:xinyang  a               lab6:City , _:b1 , <http://www.w3.org/2002/07/owl#Thing> , <http://www.w3.org/2000/01/rdf-schema#Resource> ;
+lab6:xinyang  a               lab6:City , _:b0 , <http://www.w3.org/2002/07/owl#Thing> , <http://www.w3.org/2000/01/rdf-schema#Resource> ;
         lab6:admin_name       "Henan" ;
         lab6:cityIsLocatedIn  lab6:china ;
         lab6:isLocatedIn      lab6:china ;
@@ -1028,7 +1028,7 @@ lab6:xinyang  a               lab6:City , _:b1 , <http://www.w3.org/2002/07/owl#
 
 lab6:   a       <http://www.w3.org/2002/07/owl#Ontology> , <http://www.w3.org/2000/01/rdf-schema#Resource> .
 
-lab6:nigeria  a               lab6:Country , <http://www.w3.org/2000/01/rdf-schema#Resource> , <http://www.w3.org/2002/07/owl#Thing> , _:b2 ;
+lab6:nigeria  a               lab6:Country , <http://www.w3.org/2000/01/rdf-schema#Resource> , <http://www.w3.org/2002/07/owl#Thing> , _:b1 ;
         lab6:hasAdminCapital  lab6:onitsha , lab6:lagos ;
         lab6:hasCity          lab6:onitsha , lab6:lagos ;
         lab6:iso2code         "NG" ;
@@ -1037,7 +1037,7 @@ lab6:nigeria  a               lab6:Country , <http://www.w3.org/2000/01/rdf-sche
         <http://www.w3.org/2002/07/owl#sameAs>
                 lab6:nigeria .
 
-lab6:sao_paulo  a              lab6:City , _:b0 , lab6:FirstLevelAdminCapitalCity , <http://www.w3.org/2002/07/owl#Thing> , <http://www.w3.org/2000/01/rdf-schema#Resource> , _:b1 , lab6:AdminCapitalCity ;
+lab6:sao_paulo  a              lab6:City , _:b3 , lab6:FirstLevelAdminCapitalCity , <http://www.w3.org/2002/07/owl#Thing> , _:b0 , <http://www.w3.org/2000/01/rdf-schema#Resource> , lab6:AdminCapitalCity ;
         lab6:admin_name        "São Paulo" ;
         lab6:cityIsLocatedIn   lab6:brazil ;
         lab6:isAdminCapitalOf  lab6:brazil ;
@@ -1052,7 +1052,7 @@ lab6:sao_paulo  a              lab6:City , _:b0 , lab6:FirstLevelAdminCapitalCit
         <http://www.w3.org/2002/07/owl#sameAs>
                 lab6:sao_paulo .
 
-lab6:ahmadabad  a              lab6:City , lab6:SecondLevelAdminCapitalCity , <http://www.w3.org/2002/07/owl#Thing> , _:b3 , <http://www.w3.org/2000/01/rdf-schema#Resource> , lab6:AdminCapitalCity , _:b1 ;
+lab6:ahmadabad  a              lab6:City , lab6:SecondLevelAdminCapitalCity , <http://www.w3.org/2002/07/owl#Thing> , _:b2 , <http://www.w3.org/2000/01/rdf-schema#Resource> , lab6:AdminCapitalCity , _:b0 ;
         lab6:admin_name        "Gujarāt" ;
         lab6:cityIsLocatedIn   lab6:india ;
         lab6:isAdminCapitalOf  lab6:india ;
@@ -1067,7 +1067,7 @@ lab6:ahmadabad  a              lab6:City , lab6:SecondLevelAdminCapitalCity , <h
         <http://www.w3.org/2002/07/owl#sameAs>
                 lab6:ahmadabad .
 
-lab6:huanggang  a              lab6:City , lab6:SecondLevelAdminCapitalCity , <http://www.w3.org/2002/07/owl#Thing> , _:b3 , <http://www.w3.org/2000/01/rdf-schema#Resource> , lab6:AdminCapitalCity , _:b1 ;
+lab6:huanggang  a              lab6:City , lab6:SecondLevelAdminCapitalCity , <http://www.w3.org/2002/07/owl#Thing> , _:b2 , <http://www.w3.org/2000/01/rdf-schema#Resource> , lab6:AdminCapitalCity , _:b0 ;
         lab6:admin_name        "Hubei" ;
         lab6:cityIsLocatedIn   lab6:china ;
         lab6:isAdminCapitalOf  lab6:china ;
@@ -1082,7 +1082,7 @@ lab6:huanggang  a              lab6:City , lab6:SecondLevelAdminCapitalCity , <h
         <http://www.w3.org/2002/07/owl#sameAs>
                 lab6:huanggang .
 
-lab6:peru  a             lab6:Country , <http://www.w3.org/2000/01/rdf-schema#Resource> , _:b2 , <http://www.w3.org/2002/07/owl#Thing> ;
+lab6:peru  a             lab6:Country , <http://www.w3.org/2000/01/rdf-schema#Resource> , _:b1 , <http://www.w3.org/2002/07/owl#Thing> ;
         lab6:hasCapital  lab6:lima ;
         lab6:hasCity     lab6:lima ;
         lab6:iso2code    "PE" ;
@@ -1091,7 +1091,7 @@ lab6:peru  a             lab6:Country , <http://www.w3.org/2000/01/rdf-schema#Re
         <http://www.w3.org/2002/07/owl#sameAs>
                 lab6:peru .
 
-lab6:nanning  a                lab6:City , _:b0 , lab6:FirstLevelAdminCapitalCity , <http://www.w3.org/2002/07/owl#Thing> , <http://www.w3.org/2000/01/rdf-schema#Resource> , _:b1 , lab6:AdminCapitalCity ;
+lab6:nanning  a                lab6:City , _:b3 , lab6:FirstLevelAdminCapitalCity , <http://www.w3.org/2002/07/owl#Thing> , _:b0 , <http://www.w3.org/2000/01/rdf-schema#Resource> , lab6:AdminCapitalCity ;
         lab6:admin_name        "Guangxi" ;
         lab6:cityIsLocatedIn   lab6:china ;
         lab6:isAdminCapitalOf  lab6:china ;
@@ -1106,7 +1106,7 @@ lab6:nanning  a                lab6:City , _:b0 , lab6:FirstLevelAdminCapitalCit
         <http://www.w3.org/2002/07/owl#sameAs>
                 lab6:nanning .
 
-lab6:kuala_lumpur  a          lab6:City , _:b1 , <http://www.w3.org/2002/07/owl#Thing> , <http://www.w3.org/2000/01/rdf-schema#Resource> , lab6:CapitalCity , _:b4 ;
+lab6:kuala_lumpur  a          lab6:City , _:b0 , <http://www.w3.org/2002/07/owl#Thing> , <http://www.w3.org/2000/01/rdf-schema#Resource> , lab6:CapitalCity , _:b4 ;
         lab6:admin_name       "Kuala Lumpur" ;
         lab6:cityIsLocatedIn  lab6:malaysia ;
         lab6:isCapitalOf      lab6:malaysia ;
@@ -1119,7 +1119,7 @@ lab6:kuala_lumpur  a          lab6:City , _:b1 , <http://www.w3.org/2002/07/owl#
         <http://www.w3.org/2002/07/owl#sameAs>
                 lab6:kuala_lumpur .
 
-lab6:pune  a                  lab6:City , <http://www.w3.org/2002/07/owl#Thing> , _:b1 , <http://www.w3.org/2000/01/rdf-schema#Resource> ;
+lab6:pune  a                  lab6:City , _:b0 , <http://www.w3.org/2002/07/owl#Thing> , <http://www.w3.org/2000/01/rdf-schema#Resource> ;
         lab6:admin_name       "Mahārāshtra" ;
         lab6:cityIsLocatedIn  lab6:india ;
         lab6:isLocatedIn      lab6:india ;
@@ -1131,7 +1131,7 @@ lab6:pune  a                  lab6:City , <http://www.w3.org/2002/07/owl#Thing> 
         <http://www.w3.org/2002/07/owl#sameAs>
                 lab6:pune .
 
-lab6:tongshan  a               lab6:City , lab6:SecondLevelAdminCapitalCity , <http://www.w3.org/2002/07/owl#Thing> , _:b3 , <http://www.w3.org/2000/01/rdf-schema#Resource> , lab6:AdminCapitalCity , _:b1 ;
+lab6:tongshan  a               lab6:City , lab6:SecondLevelAdminCapitalCity , <http://www.w3.org/2002/07/owl#Thing> , _:b2 , <http://www.w3.org/2000/01/rdf-schema#Resource> , lab6:AdminCapitalCity , _:b0 ;
         lab6:admin_name        "Jiangsu" ;
         lab6:cityIsLocatedIn   lab6:china ;
         lab6:isAdminCapitalOf  lab6:china ;
@@ -1146,7 +1146,7 @@ lab6:tongshan  a               lab6:City , lab6:SecondLevelAdminCapitalCity , <h
         <http://www.w3.org/2002/07/owl#sameAs>
                 lab6:tongshan .
 
-lab6:onitsha  a                lab6:City , lab6:SecondLevelAdminCapitalCity , <http://www.w3.org/2002/07/owl#Thing> , _:b3 , <http://www.w3.org/2000/01/rdf-schema#Resource> , lab6:AdminCapitalCity , _:b1 ;
+lab6:onitsha  a                lab6:City , lab6:SecondLevelAdminCapitalCity , <http://www.w3.org/2002/07/owl#Thing> , _:b2 , <http://www.w3.org/2000/01/rdf-schema#Resource> , lab6:AdminCapitalCity , _:b0 ;
         lab6:admin_name        "Anambra" ;
         lab6:cityIsLocatedIn   lab6:nigeria ;
         lab6:isAdminCapitalOf  lab6:nigeria ;
@@ -1161,7 +1161,7 @@ lab6:onitsha  a                lab6:City , lab6:SecondLevelAdminCapitalCity , <h
         <http://www.w3.org/2002/07/owl#sameAs>
                 lab6:onitsha .
 
-lab6:mexico  a           lab6:Country , <http://www.w3.org/2000/01/rdf-schema#Resource> , _:b2 , <http://www.w3.org/2002/07/owl#Thing> ;
+lab6:mexico  a           lab6:Country , <http://www.w3.org/2000/01/rdf-schema#Resource> , _:b1 , <http://www.w3.org/2002/07/owl#Thing> ;
         lab6:hasCapital  lab6:mexico_city ;
         lab6:hasCity     lab6:mexico_city ;
         lab6:iso2code    "MX" ;
@@ -1170,7 +1170,7 @@ lab6:mexico  a           lab6:Country , <http://www.w3.org/2000/01/rdf-schema#Re
         <http://www.w3.org/2002/07/owl#sameAs>
                 lab6:mexico .
 
-lab6:tianjin  a                lab6:City , _:b0 , lab6:FirstLevelAdminCapitalCity , <http://www.w3.org/2002/07/owl#Thing> , <http://www.w3.org/2000/01/rdf-schema#Resource> , _:b1 , lab6:AdminCapitalCity ;
+lab6:tianjin  a                lab6:City , _:b3 , lab6:FirstLevelAdminCapitalCity , <http://www.w3.org/2002/07/owl#Thing> , <http://www.w3.org/2000/01/rdf-schema#Resource> , _:b0 , lab6:AdminCapitalCity ;
         lab6:admin_name        "Tianjin" ;
         lab6:cityIsLocatedIn   lab6:china ;
         lab6:isAdminCapitalOf  lab6:china ;
@@ -1185,7 +1185,7 @@ lab6:tianjin  a                lab6:City , _:b0 , lab6:FirstLevelAdminCapitalCit
         <http://www.w3.org/2002/07/owl#sameAs>
                 lab6:tianjin .
 
-lab6:nantong  a                lab6:City , lab6:SecondLevelAdminCapitalCity , <http://www.w3.org/2002/07/owl#Thing> , _:b3 , <http://www.w3.org/2000/01/rdf-schema#Resource> , lab6:AdminCapitalCity , _:b1 ;
+lab6:nantong  a                lab6:City , lab6:SecondLevelAdminCapitalCity , <http://www.w3.org/2002/07/owl#Thing> , _:b2 , <http://www.w3.org/2000/01/rdf-schema#Resource> , lab6:AdminCapitalCity , _:b0 ;
         lab6:admin_name        "Jiangsu" ;
         lab6:cityIsLocatedIn   lab6:china ;
         lab6:isAdminCapitalOf  lab6:china ;
@@ -1200,7 +1200,7 @@ lab6:nantong  a                lab6:City , lab6:SecondLevelAdminCapitalCity , <h
         <http://www.w3.org/2002/07/owl#sameAs>
                 lab6:nantong .
 
-lab6:paris  a                 lab6:City , _:b1 , <http://www.w3.org/2002/07/owl#Thing> , <http://www.w3.org/2000/01/rdf-schema#Resource> , _:b4 , lab6:CapitalCity ;
+lab6:paris  a                 lab6:City , _:b0 , <http://www.w3.org/2002/07/owl#Thing> , <http://www.w3.org/2000/01/rdf-schema#Resource> , lab6:CapitalCity , _:b4 ;
         lab6:admin_name       "Île-de-France" ;
         lab6:cityIsLocatedIn  lab6:france ;
         lab6:isCapitalOf      lab6:france ;
@@ -1213,7 +1213,7 @@ lab6:paris  a                 lab6:City , _:b1 , <http://www.w3.org/2002/07/owl#
         <http://www.w3.org/2002/07/owl#sameAs>
                 lab6:paris .
 
-lab6:mexico_city  a           lab6:City , _:b1 , <http://www.w3.org/2002/07/owl#Thing> , <http://www.w3.org/2000/01/rdf-schema#Resource> , lab6:CapitalCity , _:b4 ;
+lab6:mexico_city  a           lab6:City , _:b0 , <http://www.w3.org/2002/07/owl#Thing> , <http://www.w3.org/2000/01/rdf-schema#Resource> , lab6:CapitalCity , _:b4 ;
         lab6:admin_name       "Ciudad de México" ;
         lab6:cityIsLocatedIn  lab6:mexico ;
         lab6:isCapitalOf      lab6:mexico ;
@@ -1226,7 +1226,7 @@ lab6:mexico_city  a           lab6:City , _:b1 , <http://www.w3.org/2002/07/owl#
         <http://www.w3.org/2002/07/owl#sameAs>
                 lab6:mexico_city .
 
-lab6:dhaka  a                 lab6:City , _:b1 , <http://www.w3.org/2002/07/owl#Thing> , <http://www.w3.org/2000/01/rdf-schema#Resource> , _:b4 , lab6:CapitalCity ;
+lab6:dhaka  a                 lab6:City , _:b0 , <http://www.w3.org/2002/07/owl#Thing> , <http://www.w3.org/2000/01/rdf-schema#Resource> , lab6:CapitalCity , _:b4 ;
         lab6:admin_name       "Dhaka" ;
         lab6:cityIsLocatedIn  lab6:bangladesh ;
         lab6:isCapitalOf      lab6:bangladesh ;
@@ -1239,7 +1239,7 @@ lab6:dhaka  a                 lab6:City , _:b1 , <http://www.w3.org/2002/07/owl#
         <http://www.w3.org/2002/07/owl#sameAs>
                 lab6:dhaka .
 
-lab6:rio_de_janeiro  a         lab6:City , _:b0 , lab6:FirstLevelAdminCapitalCity , <http://www.w3.org/2002/07/owl#Thing> , <http://www.w3.org/2000/01/rdf-schema#Resource> , _:b1 , lab6:AdminCapitalCity ;
+lab6:rio_de_janeiro  a         lab6:City , _:b3 , lab6:FirstLevelAdminCapitalCity , <http://www.w3.org/2002/07/owl#Thing> , _:b0 , <http://www.w3.org/2000/01/rdf-schema#Resource> , lab6:AdminCapitalCity ;
         lab6:admin_name        "Rio de Janeiro" ;
         lab6:cityIsLocatedIn   lab6:brazil ;
         lab6:isAdminCapitalOf  lab6:brazil ;
@@ -1254,7 +1254,7 @@ lab6:rio_de_janeiro  a         lab6:City , _:b0 , lab6:FirstLevelAdminCapitalCit
         <http://www.w3.org/2002/07/owl#sameAs>
                 lab6:rio_de_janeiro .
 
-lab6:russia  a           lab6:Country , <http://www.w3.org/2000/01/rdf-schema#Resource> , _:b2 , <http://www.w3.org/2002/07/owl#Thing> ;
+lab6:russia  a           lab6:Country , <http://www.w3.org/2000/01/rdf-schema#Resource> , _:b1 , <http://www.w3.org/2002/07/owl#Thing> ;
         lab6:hasCapital  lab6:moscow ;
         lab6:hasCity     lab6:moscow ;
         lab6:iso2code    "RU" ;
@@ -1263,7 +1263,7 @@ lab6:russia  a           lab6:Country , <http://www.w3.org/2000/01/rdf-schema#Re
         <http://www.w3.org/2002/07/owl#sameAs>
                 lab6:russia .
 
-lab6:thailand  a         lab6:Country , <http://www.w3.org/2000/01/rdf-schema#Resource> , _:b2 , <http://www.w3.org/2002/07/owl#Thing> ;
+lab6:thailand  a         lab6:Country , <http://www.w3.org/2000/01/rdf-schema#Resource> , _:b1 , <http://www.w3.org/2002/07/owl#Thing> ;
         lab6:hasCapital  lab6:bangkok ;
         lab6:hasCity     lab6:bangkok ;
         lab6:iso2code    "TH" ;
@@ -1272,7 +1272,7 @@ lab6:thailand  a         lab6:Country , <http://www.w3.org/2000/01/rdf-schema#Re
         <http://www.w3.org/2002/07/owl#sameAs>
                 lab6:thailand .
 
-lab6:pakistan  a              lab6:Country , <http://www.w3.org/2000/01/rdf-schema#Resource> , <http://www.w3.org/2002/07/owl#Thing> , _:b2 ;
+lab6:pakistan  a              lab6:Country , <http://www.w3.org/2000/01/rdf-schema#Resource> , <http://www.w3.org/2002/07/owl#Thing> , _:b1 ;
         lab6:hasAdminCapital  lab6:lahore , lab6:karachi ;
         lab6:hasCity          lab6:lahore , lab6:karachi ;
         lab6:iso2code         "PK" ;
@@ -1281,7 +1281,7 @@ lab6:pakistan  a              lab6:Country , <http://www.w3.org/2000/01/rdf-sche
         <http://www.w3.org/2002/07/owl#sameAs>
                 lab6:pakistan .
 
-lab6:hefei  a                  lab6:City , _:b0 , lab6:FirstLevelAdminCapitalCity , <http://www.w3.org/2002/07/owl#Thing> , <http://www.w3.org/2000/01/rdf-schema#Resource> , _:b1 , lab6:AdminCapitalCity ;
+lab6:hefei  a                  lab6:City , _:b3 , lab6:FirstLevelAdminCapitalCity , <http://www.w3.org/2002/07/owl#Thing> , <http://www.w3.org/2000/01/rdf-schema#Resource> , _:b0 , lab6:AdminCapitalCity ;
         lab6:admin_name        "Anhui" ;
         lab6:cityIsLocatedIn   lab6:china ;
         lab6:isAdminCapitalOf  lab6:china ;
@@ -1296,7 +1296,7 @@ lab6:hefei  a                  lab6:City , _:b0 , lab6:FirstLevelAdminCapitalCit
         <http://www.w3.org/2002/07/owl#sameAs>
                 lab6:hefei .
 
-lab6:wuhan  a                  lab6:City , _:b0 , lab6:FirstLevelAdminCapitalCity , <http://www.w3.org/2002/07/owl#Thing> , <http://www.w3.org/2000/01/rdf-schema#Resource> , _:b1 , lab6:AdminCapitalCity ;
+lab6:wuhan  a                  lab6:City , _:b3 , lab6:FirstLevelAdminCapitalCity , <http://www.w3.org/2002/07/owl#Thing> , _:b0 , <http://www.w3.org/2000/01/rdf-schema#Resource> , lab6:AdminCapitalCity ;
         lab6:admin_name        "Hubei" ;
         lab6:cityIsLocatedIn   lab6:china ;
         lab6:isAdminCapitalOf  lab6:china ;
@@ -1311,7 +1311,7 @@ lab6:wuhan  a                  lab6:City , _:b0 , lab6:FirstLevelAdminCapitalCit
         <http://www.w3.org/2002/07/owl#sameAs>
                 lab6:wuhan .
 
-lab6:brazil  a                lab6:Country , <http://www.w3.org/2000/01/rdf-schema#Resource> , <http://www.w3.org/2002/07/owl#Thing> , _:b2 ;
+lab6:brazil  a                lab6:Country , <http://www.w3.org/2000/01/rdf-schema#Resource> , <http://www.w3.org/2002/07/owl#Thing> , _:b1 ;
         lab6:hasAdminCapital  lab6:rio_de_janeiro , lab6:sao_paulo ;
         lab6:hasCity          lab6:rio_de_janeiro , lab6:sao_paulo ;
         lab6:iso2code         "BR" ;
@@ -1320,7 +1320,7 @@ lab6:brazil  a                lab6:Country , <http://www.w3.org/2000/01/rdf-sche
         <http://www.w3.org/2002/07/owl#sameAs>
                 lab6:brazil .
 
-lab6:cangzhou  a              lab6:City , <http://www.w3.org/2000/01/rdf-schema#Resource> , <http://www.w3.org/2002/07/owl#Thing> , _:b1 ;
+lab6:cangzhou  a              lab6:City , _:b0 , <http://www.w3.org/2002/07/owl#Thing> , <http://www.w3.org/2000/01/rdf-schema#Resource> ;
         lab6:admin_name       "Hebei" ;
         lab6:cityIsLocatedIn  lab6:china ;
         lab6:isLocatedIn      lab6:china ;
@@ -1332,7 +1332,7 @@ lab6:cangzhou  a              lab6:City , <http://www.w3.org/2000/01/rdf-schema#
         <http://www.w3.org/2002/07/owl#sameAs>
                 lab6:cangzhou .
 
-lab6:argentina  a        lab6:Country , <http://www.w3.org/2000/01/rdf-schema#Resource> , _:b2 , <http://www.w3.org/2002/07/owl#Thing> ;
+lab6:argentina  a        lab6:Country , <http://www.w3.org/2000/01/rdf-schema#Resource> , _:b1 , <http://www.w3.org/2002/07/owl#Thing> ;
         lab6:hasCapital  lab6:buenos_aires ;
         lab6:hasCity     lab6:buenos_aires ;
         lab6:iso2code    "AR" ;
@@ -1341,7 +1341,7 @@ lab6:argentina  a        lab6:Country , <http://www.w3.org/2000/01/rdf-schema#Re
         <http://www.w3.org/2002/07/owl#sameAs>
                 lab6:argentina .
 
-lab6:colombia  a         lab6:Country , <http://www.w3.org/2000/01/rdf-schema#Resource> , _:b2 , <http://www.w3.org/2002/07/owl#Thing> ;
+lab6:colombia  a         lab6:Country , <http://www.w3.org/2000/01/rdf-schema#Resource> , _:b1 , <http://www.w3.org/2002/07/owl#Thing> ;
         lab6:hasCapital  lab6:bogota ;
         lab6:hasCity     lab6:bogota ;
         lab6:iso2code    "CO" ;
@@ -1351,7 +1351,7 @@ lab6:colombia  a         lab6:Country , <http://www.w3.org/2000/01/rdf-schema#Re
                 lab6:colombia .
 
 <http://www.semanticweb.org/ernesto/inm713/lab6/xi'an>
-        a                      lab6:City , _:b0 , lab6:FirstLevelAdminCapitalCity , <http://www.w3.org/2002/07/owl#Thing> , <http://www.w3.org/2000/01/rdf-schema#Resource> , _:b1 , lab6:AdminCapitalCity ;
+        a                      lab6:City , _:b3 , lab6:FirstLevelAdminCapitalCity , <http://www.w3.org/2002/07/owl#Thing> , <http://www.w3.org/2000/01/rdf-schema#Resource> , _:b0 , lab6:AdminCapitalCity ;
         lab6:admin_name        "Shaanxi" ;
         lab6:cityIsLocatedIn   lab6:china ;
         lab6:isAdminCapitalOf  lab6:china ;
@@ -1366,7 +1366,7 @@ lab6:colombia  a         lab6:Country , <http://www.w3.org/2000/01/rdf-schema#Re
         <http://www.w3.org/2002/07/owl#sameAs>
                 <http://www.semanticweb.org/ernesto/inm713/lab6/xi'an> .
 
-lab6:united_kingdom  a   <http://www.w3.org/2002/07/owl#NamedIndividual> , lab6:Country , <http://www.w3.org/2000/01/rdf-schema#Resource> , _:b2 , <http://www.w3.org/2002/07/owl#Thing> ;
+lab6:united_kingdom  a   <http://www.w3.org/2002/07/owl#NamedIndividual> , lab6:Country , <http://www.w3.org/2000/01/rdf-schema#Resource> , _:b1 , <http://www.w3.org/2002/07/owl#Thing> ;
         lab6:hasCapital  lab6:london ;
         lab6:hasCity     lab6:london , lab6:oxford ;
         lab6:iso2code    "GB" ;
@@ -1375,7 +1375,7 @@ lab6:united_kingdom  a   <http://www.w3.org/2002/07/owl#NamedIndividual> , lab6:
         <http://www.w3.org/2002/07/owl#sameAs>
                 lab6:united_kingdom .
 
-lab6:linyi  a                 lab6:City , <http://www.w3.org/2002/07/owl#Thing> , _:b1 , <http://www.w3.org/2000/01/rdf-schema#Resource> ;
+lab6:linyi  a                 lab6:City , <http://www.w3.org/2002/07/owl#Thing> , <http://www.w3.org/2000/01/rdf-schema#Resource> , _:b0 ;
         lab6:admin_name       "Shandong" ;
         lab6:cityIsLocatedIn  lab6:china ;
         lab6:isLocatedIn      lab6:china ;
@@ -1387,7 +1387,7 @@ lab6:linyi  a                 lab6:City , <http://www.w3.org/2002/07/owl#Thing> 
         <http://www.w3.org/2002/07/owl#sameAs>
                 lab6:linyi .
 
-lab6:los_angeles  a           lab6:City , <http://www.w3.org/2002/07/owl#Thing> , _:b1 , <http://www.w3.org/2000/01/rdf-schema#Resource> ;
+lab6:los_angeles  a           lab6:City , <http://www.w3.org/2002/07/owl#Thing> , _:b0 , <http://www.w3.org/2000/01/rdf-schema#Resource> ;
         lab6:admin_name       "California" ;
         lab6:cityIsLocatedIn  lab6:united_states ;
         lab6:isLocatedIn      lab6:united_states ;
@@ -1399,7 +1399,7 @@ lab6:los_angeles  a           lab6:City , <http://www.w3.org/2002/07/owl#Thing> 
         <http://www.w3.org/2002/07/owl#sameAs>
                 lab6:los_angeles .
 
-lab6:dongguan  a               lab6:City , lab6:SecondLevelAdminCapitalCity , <http://www.w3.org/2002/07/owl#Thing> , _:b3 , <http://www.w3.org/2000/01/rdf-schema#Resource> , lab6:AdminCapitalCity , _:b1 ;
+lab6:dongguan  a               lab6:City , lab6:SecondLevelAdminCapitalCity , <http://www.w3.org/2002/07/owl#Thing> , _:b2 , <http://www.w3.org/2000/01/rdf-schema#Resource> , lab6:AdminCapitalCity , _:b0 ;
         lab6:admin_name        "Guangdong" ;
         lab6:cityIsLocatedIn   lab6:china ;
         lab6:isAdminCapitalOf  lab6:china ;
@@ -1414,7 +1414,7 @@ lab6:dongguan  a               lab6:City , lab6:SecondLevelAdminCapitalCity , <h
         <http://www.w3.org/2002/07/owl#sameAs>
                 lab6:dongguan .
 
-lab6:luanda  a                lab6:City , _:b1 , <http://www.w3.org/2002/07/owl#Thing> , <http://www.w3.org/2000/01/rdf-schema#Resource> , _:b4 , lab6:CapitalCity ;
+lab6:luanda  a                lab6:City , _:b0 , <http://www.w3.org/2002/07/owl#Thing> , <http://www.w3.org/2000/01/rdf-schema#Resource> , _:b4 , lab6:CapitalCity ;
         lab6:admin_name       "Luanda" ;
         lab6:cityIsLocatedIn  lab6:angola ;
         lab6:isCapitalOf      lab6:angola ;
@@ -1427,7 +1427,7 @@ lab6:luanda  a                lab6:City , _:b1 , <http://www.w3.org/2002/07/owl#
         <http://www.w3.org/2002/07/owl#sameAs>
                 lab6:luanda .
 
-lab6:handan  a                lab6:City , _:b1 , <http://www.w3.org/2000/01/rdf-schema#Resource> , <http://www.w3.org/2002/07/owl#Thing> ;
+lab6:handan  a                lab6:City , <http://www.w3.org/2002/07/owl#Thing> , _:b0 , <http://www.w3.org/2000/01/rdf-schema#Resource> ;
         lab6:admin_name       "Hebei" ;
         lab6:cityIsLocatedIn  lab6:china ;
         lab6:isLocatedIn      lab6:china ;
@@ -1439,7 +1439,7 @@ lab6:handan  a                lab6:City , _:b1 , <http://www.w3.org/2000/01/rdf-
         <http://www.w3.org/2002/07/owl#sameAs>
                 lab6:handan .
 
-lab6:chicago  a               lab6:City , _:b1 , <http://www.w3.org/2002/07/owl#Thing> , <http://www.w3.org/2000/01/rdf-schema#Resource> ;
+lab6:chicago  a               lab6:City , <http://www.w3.org/2002/07/owl#Thing> , <http://www.w3.org/2000/01/rdf-schema#Resource> , _:b0 ;
         lab6:admin_name       "Illinois" ;
         lab6:cityIsLocatedIn  lab6:united_states ;
         lab6:isLocatedIn      lab6:united_states ;
@@ -1451,7 +1451,7 @@ lab6:chicago  a               lab6:City , _:b1 , <http://www.w3.org/2002/07/owl#
         <http://www.w3.org/2002/07/owl#sameAs>
                 lab6:chicago .
 
-lab6:yichun  a                 lab6:City , lab6:SecondLevelAdminCapitalCity , <http://www.w3.org/2002/07/owl#Thing> , _:b3 , <http://www.w3.org/2000/01/rdf-schema#Resource> , lab6:AdminCapitalCity , _:b1 ;
+lab6:yichun  a                 lab6:City , lab6:SecondLevelAdminCapitalCity , <http://www.w3.org/2002/07/owl#Thing> , _:b2 , <http://www.w3.org/2000/01/rdf-schema#Resource> , lab6:AdminCapitalCity , _:b0 ;
         lab6:admin_name        "Jiangxi" ;
         lab6:cityIsLocatedIn   lab6:china ;
         lab6:isAdminCapitalOf  lab6:china ;
@@ -1466,7 +1466,7 @@ lab6:yichun  a                 lab6:City , lab6:SecondLevelAdminCapitalCity , <h
         <http://www.w3.org/2002/07/owl#sameAs>
                 lab6:yichun .
 
-lab6:japan  a                 lab6:Country , <http://www.w3.org/2000/01/rdf-schema#Resource> , <http://www.w3.org/2002/07/owl#Thing> , _:b2 ;
+lab6:japan  a                 lab6:Country , <http://www.w3.org/2000/01/rdf-schema#Resource> , <http://www.w3.org/2002/07/owl#Thing> , _:b1 ;
         lab6:hasAdminCapital  lab6:nagoya , lab6:osaka ;
         lab6:hasCapital       lab6:tokyo ;
         lab6:hasCity          lab6:tokyo , lab6:nagoya , lab6:osaka ;
@@ -1476,7 +1476,7 @@ lab6:japan  a                 lab6:Country , <http://www.w3.org/2000/01/rdf-sche
         <http://www.w3.org/2002/07/owl#sameAs>
                 lab6:japan .
 
-lab6:tangshan  a              lab6:City , _:b1 , <http://www.w3.org/2002/07/owl#Thing> , <http://www.w3.org/2000/01/rdf-schema#Resource> ;
+lab6:tangshan  a              lab6:City , <http://www.w3.org/2000/01/rdf-schema#Resource> , <http://www.w3.org/2002/07/owl#Thing> , _:b0 ;
         lab6:admin_name       "Hebei" ;
         lab6:cityIsLocatedIn  lab6:china ;
         lab6:isLocatedIn      lab6:china ;
@@ -1488,7 +1488,7 @@ lab6:tangshan  a              lab6:City , _:b1 , <http://www.w3.org/2002/07/owl#
         <http://www.w3.org/2002/07/owl#sameAs>
                 lab6:tangshan .
 
-lab6:shenyang  a               lab6:City , _:b0 , lab6:FirstLevelAdminCapitalCity , <http://www.w3.org/2002/07/owl#Thing> , <http://www.w3.org/2000/01/rdf-schema#Resource> , _:b1 , lab6:AdminCapitalCity ;
+lab6:shenyang  a               lab6:City , _:b3 , lab6:FirstLevelAdminCapitalCity , <http://www.w3.org/2002/07/owl#Thing> , <http://www.w3.org/2000/01/rdf-schema#Resource> , _:b0 , lab6:AdminCapitalCity ;
         lab6:admin_name        "Liaoning" ;
         lab6:cityIsLocatedIn   lab6:china ;
         lab6:isAdminCapitalOf  lab6:china ;
@@ -1503,7 +1503,7 @@ lab6:shenyang  a               lab6:City , _:b0 , lab6:FirstLevelAdminCapitalCit
         <http://www.w3.org/2002/07/owl#sameAs>
                 lab6:shenyang .
 
-lab6:bangladesh  a       lab6:Country , <http://www.w3.org/2000/01/rdf-schema#Resource> , _:b2 , <http://www.w3.org/2002/07/owl#Thing> ;
+lab6:bangladesh  a       lab6:Country , <http://www.w3.org/2000/01/rdf-schema#Resource> , _:b1 , <http://www.w3.org/2002/07/owl#Thing> ;
         lab6:hasCapital  lab6:dhaka ;
         lab6:hasCity     lab6:dhaka ;
         lab6:iso2code    "BD" ;
@@ -1512,7 +1512,7 @@ lab6:bangladesh  a       lab6:Country , <http://www.w3.org/2000/01/rdf-schema#Re
         <http://www.w3.org/2002/07/owl#sameAs>
                 lab6:bangladesh .
 
-lab6:turkey  a                lab6:Country , <http://www.w3.org/2000/01/rdf-schema#Resource> , <http://www.w3.org/2002/07/owl#Thing> , _:b2 ;
+lab6:turkey  a                lab6:Country , <http://www.w3.org/2000/01/rdf-schema#Resource> , <http://www.w3.org/2002/07/owl#Thing> , _:b1 ;
         lab6:hasAdminCapital  lab6:istanbul ;
         lab6:hasCity          lab6:istanbul ;
         lab6:iso2code         "TR" ;
@@ -1521,7 +1521,7 @@ lab6:turkey  a                lab6:Country , <http://www.w3.org/2000/01/rdf-sche
         <http://www.w3.org/2002/07/owl#sameAs>
                 lab6:turkey .
 
-lab6:chengdu  a                lab6:City , _:b0 , lab6:FirstLevelAdminCapitalCity , <http://www.w3.org/2002/07/owl#Thing> , <http://www.w3.org/2000/01/rdf-schema#Resource> , _:b1 , lab6:AdminCapitalCity ;
+lab6:chengdu  a                lab6:City , _:b3 , lab6:FirstLevelAdminCapitalCity , <http://www.w3.org/2002/07/owl#Thing> , <http://www.w3.org/2000/01/rdf-schema#Resource> , _:b0 , lab6:AdminCapitalCity ;
         lab6:admin_name        "Sichuan" ;
         lab6:cityIsLocatedIn   lab6:china ;
         lab6:isAdminCapitalOf  lab6:china ;
@@ -1536,7 +1536,7 @@ lab6:chengdu  a                lab6:City , _:b0 , lab6:FirstLevelAdminCapitalCit
         <http://www.w3.org/2002/07/owl#sameAs>
                 lab6:chengdu .
 
-lab6:guangzhou  a              lab6:City , _:b0 , lab6:FirstLevelAdminCapitalCity , <http://www.w3.org/2002/07/owl#Thing> , <http://www.w3.org/2000/01/rdf-schema#Resource> , _:b1 , lab6:AdminCapitalCity ;
+lab6:guangzhou  a              lab6:City , _:b3 , lab6:FirstLevelAdminCapitalCity , <http://www.w3.org/2002/07/owl#Thing> , _:b0 , <http://www.w3.org/2000/01/rdf-schema#Resource> , lab6:AdminCapitalCity ;
         lab6:admin_name        "Guangdong" ;
         lab6:cityIsLocatedIn   lab6:china ;
         lab6:isAdminCapitalOf  lab6:china ;
@@ -1551,7 +1551,7 @@ lab6:guangzhou  a              lab6:City , _:b0 , lab6:FirstLevelAdminCapitalCit
         <http://www.w3.org/2002/07/owl#sameAs>
                 lab6:guangzhou .
 
-lab6:india  a                 lab6:Country , <http://www.w3.org/2000/01/rdf-schema#Resource> , <http://www.w3.org/2002/07/owl#Thing> , _:b2 ;
+lab6:india  a                 lab6:Country , <http://www.w3.org/2000/01/rdf-schema#Resource> , <http://www.w3.org/2002/07/owl#Thing> , _:b1 ;
         lab6:hasAdminCapital  lab6:ahmadabad , lab6:hyderabad , lab6:chennai , lab6:bangalore , lab6:kolkata , lab6:mumbai , lab6:delhi ;
         lab6:hasCity          lab6:pune , lab6:ahmadabad , lab6:hyderabad , lab6:chennai , lab6:bangalore , lab6:kolkata , lab6:mumbai , lab6:delhi ;
         lab6:iso2code         "IN" ;
@@ -1560,7 +1560,7 @@ lab6:india  a                 lab6:Country , <http://www.w3.org/2000/01/rdf-sche
         <http://www.w3.org/2002/07/owl#sameAs>
                 lab6:india .
 
-lab6:vietnam  a               lab6:Country , <http://www.w3.org/2000/01/rdf-schema#Resource> , <http://www.w3.org/2002/07/owl#Thing> , _:b2 ;
+lab6:vietnam  a               lab6:Country , <http://www.w3.org/2000/01/rdf-schema#Resource> , <http://www.w3.org/2002/07/owl#Thing> , _:b1 ;
         lab6:hasAdminCapital  lab6:ho_chi_minh_city ;
         lab6:hasCapital       lab6:hanoi ;
         lab6:hasCity          lab6:hanoi , lab6:ho_chi_minh_city ;
@@ -1570,7 +1570,7 @@ lab6:vietnam  a               lab6:Country , <http://www.w3.org/2000/01/rdf-sche
         <http://www.w3.org/2002/07/owl#sameAs>
                 lab6:vietnam .
 
-lab6:city_ascii  a            lab6:City , _:b1 , <http://www.w3.org/2002/07/owl#Thing> , <http://www.w3.org/2000/01/rdf-schema#Resource> ;
+lab6:city_ascii  a            lab6:City , _:b0 , <http://www.w3.org/2002/07/owl#Thing> , <http://www.w3.org/2000/01/rdf-schema#Resource> ;
         lab6:admin_name       "admin_name" ;
         lab6:cityIsLocatedIn  lab6:country ;
         lab6:isLocatedIn      lab6:country ;
@@ -1583,7 +1583,7 @@ lab6:city_ascii  a            lab6:City , _:b1 , <http://www.w3.org/2002/07/owl#
                 lab6:city_ascii .
 
 lab6:ho_chi_minh_city
-        a                      lab6:City , _:b0 , lab6:FirstLevelAdminCapitalCity , <http://www.w3.org/2002/07/owl#Thing> , <http://www.w3.org/2000/01/rdf-schema#Resource> , _:b1 , lab6:AdminCapitalCity ;
+        a                      lab6:City , _:b3 , lab6:FirstLevelAdminCapitalCity , <http://www.w3.org/2002/07/owl#Thing> , <http://www.w3.org/2000/01/rdf-schema#Resource> , _:b0 , lab6:AdminCapitalCity ;
         lab6:admin_name        "Hồ Chí Minh" ;
         lab6:cityIsLocatedIn   lab6:vietnam ;
         lab6:isAdminCapitalOf  lab6:vietnam ;
@@ -1598,7 +1598,7 @@ lab6:ho_chi_minh_city
         <http://www.w3.org/2002/07/owl#sameAs>
                 lab6:ho_chi_minh_city .
 
-lab6:malaysia  a         lab6:Country , <http://www.w3.org/2000/01/rdf-schema#Resource> , _:b2 , <http://www.w3.org/2002/07/owl#Thing> ;
+lab6:malaysia  a         lab6:Country , <http://www.w3.org/2000/01/rdf-schema#Resource> , _:b1 , <http://www.w3.org/2002/07/owl#Thing> ;
         lab6:hasCapital  lab6:kuala_lumpur ;
         lab6:hasCity     lab6:kuala_lumpur ;
         lab6:iso2code    "MY" ;
@@ -1607,7 +1607,7 @@ lab6:malaysia  a         lab6:Country , <http://www.w3.org/2000/01/rdf-schema#Re
         <http://www.w3.org/2002/07/owl#sameAs>
                 lab6:malaysia .
 
-lab6:foshan  a                 lab6:City , lab6:SecondLevelAdminCapitalCity , <http://www.w3.org/2002/07/owl#Thing> , _:b3 , <http://www.w3.org/2000/01/rdf-schema#Resource> , lab6:AdminCapitalCity , _:b1 ;
+lab6:foshan  a                 lab6:City , lab6:SecondLevelAdminCapitalCity , <http://www.w3.org/2002/07/owl#Thing> , _:b2 , <http://www.w3.org/2000/01/rdf-schema#Resource> , lab6:AdminCapitalCity , _:b0 ;
         lab6:admin_name        "Guangdong" ;
         lab6:cityIsLocatedIn   lab6:china ;
         lab6:isAdminCapitalOf  lab6:china ;
@@ -1622,7 +1622,7 @@ lab6:foshan  a                 lab6:City , lab6:SecondLevelAdminCapitalCity , <h
         <http://www.w3.org/2002/07/owl#sameAs>
                 lab6:foshan .
 
-lab6:shijiazhuang  a           lab6:City , _:b0 , lab6:FirstLevelAdminCapitalCity , <http://www.w3.org/2002/07/owl#Thing> , <http://www.w3.org/2000/01/rdf-schema#Resource> , _:b1 , lab6:AdminCapitalCity ;
+lab6:shijiazhuang  a           lab6:City , _:b3 , lab6:FirstLevelAdminCapitalCity , <http://www.w3.org/2002/07/owl#Thing> , _:b0 , <http://www.w3.org/2000/01/rdf-schema#Resource> , lab6:AdminCapitalCity ;
         lab6:admin_name        "Hebei" ;
         lab6:cityIsLocatedIn   lab6:china ;
         lab6:isAdminCapitalOf  lab6:china ;
@@ -1637,7 +1637,7 @@ lab6:shijiazhuang  a           lab6:City , _:b0 , lab6:FirstLevelAdminCapitalCit
         <http://www.w3.org/2002/07/owl#sameAs>
                 lab6:shijiazhuang .
 
-lab6:manila  a                lab6:City , _:b1 , <http://www.w3.org/2002/07/owl#Thing> , <http://www.w3.org/2000/01/rdf-schema#Resource> , _:b4 , lab6:CapitalCity ;
+lab6:manila  a                lab6:City , _:b0 , <http://www.w3.org/2002/07/owl#Thing> , <http://www.w3.org/2000/01/rdf-schema#Resource> , _:b4 , lab6:CapitalCity ;
         lab6:admin_name       "Manila" ;
         lab6:cityIsLocatedIn  lab6:philippines ;
         lab6:isCapitalOf      lab6:philippines ;
@@ -1650,7 +1650,7 @@ lab6:manila  a                lab6:City , _:b1 , <http://www.w3.org/2002/07/owl#
         <http://www.w3.org/2002/07/owl#sameAs>
                 lab6:manila .
 
-lab6:riyadh  a                lab6:City , _:b1 , <http://www.w3.org/2002/07/owl#Thing> , <http://www.w3.org/2000/01/rdf-schema#Resource> , _:b4 , lab6:CapitalCity ;
+lab6:riyadh  a                lab6:City , _:b0 , <http://www.w3.org/2002/07/owl#Thing> , <http://www.w3.org/2000/01/rdf-schema#Resource> , lab6:CapitalCity , _:b4 ;
         lab6:admin_name       "Ar Riyāḑ" ;
         lab6:cityIsLocatedIn  lab6:saudi_arabia ;
         lab6:isCapitalOf      lab6:saudi_arabia ;
@@ -1663,7 +1663,7 @@ lab6:riyadh  a                lab6:City , _:b1 , <http://www.w3.org/2002/07/owl#
         <http://www.w3.org/2002/07/owl#sameAs>
                 lab6:riyadh .
 
-lab6:iran  a             lab6:Country , <http://www.w3.org/2000/01/rdf-schema#Resource> , _:b2 , <http://www.w3.org/2002/07/owl#Thing> ;
+lab6:iran  a             lab6:Country , <http://www.w3.org/2000/01/rdf-schema#Resource> , _:b1 , <http://www.w3.org/2002/07/owl#Thing> ;
         lab6:hasCapital  lab6:tehran ;
         lab6:hasCity     lab6:tehran ;
         lab6:iso2code    "IR" ;
@@ -1672,7 +1672,7 @@ lab6:iran  a             lab6:Country , <http://www.w3.org/2000/01/rdf-schema#Re
         <http://www.w3.org/2002/07/owl#sameAs>
                 lab6:iran .
 
-lab6:united_states  a  lab6:Country , <http://www.w3.org/2000/01/rdf-schema#Resource> , _:b2 , <http://www.w3.org/2002/07/owl#Thing> ;
+lab6:united_states  a  lab6:Country , <http://www.w3.org/2000/01/rdf-schema#Resource> , _:b1 , <http://www.w3.org/2002/07/owl#Thing> ;
         lab6:hasCity   lab6:miami , lab6:chicago , lab6:los_angeles , lab6:new_york ;
         lab6:iso2code  "US" ;
         lab6:iso3code  "USA" ;
@@ -1680,7 +1680,7 @@ lab6:united_states  a  lab6:Country , <http://www.w3.org/2000/01/rdf-schema#Reso
         <http://www.w3.org/2002/07/owl#sameAs>
                 lab6:united_states .
 
-lab6:london  a                lab6:City , <http://www.w3.org/2002/07/owl#NamedIndividual> , _:b1 , <http://www.w3.org/2002/07/owl#Thing> , <http://www.w3.org/2000/01/rdf-schema#Resource> , _:b4 , lab6:CapitalCity ;
+lab6:london  a                lab6:City , <http://www.w3.org/2002/07/owl#NamedIndividual> , _:b0 , <http://www.w3.org/2002/07/owl#Thing> , <http://www.w3.org/2000/01/rdf-schema#Resource> , lab6:CapitalCity , _:b4 ;
         lab6:admin_name       "London, City of" ;
         lab6:cityIsLocatedIn  lab6:united_kingdom ;
         lab6:isCapitalOf      lab6:united_kingdom ;
@@ -1694,7 +1694,7 @@ lab6:london  a                lab6:City , <http://www.w3.org/2002/07/owl#NamedIn
         <http://www.w3.org/2002/07/owl#sameAs>
                 lab6:london .
 
-lab6:zhengzhou  a              lab6:City , _:b0 , lab6:FirstLevelAdminCapitalCity , <http://www.w3.org/2002/07/owl#Thing> , <http://www.w3.org/2000/01/rdf-schema#Resource> , _:b1 , lab6:AdminCapitalCity ;
+lab6:zhengzhou  a              lab6:City , _:b3 , lab6:FirstLevelAdminCapitalCity , <http://www.w3.org/2002/07/owl#Thing> , _:b0 , <http://www.w3.org/2000/01/rdf-schema#Resource> , lab6:AdminCapitalCity ;
         lab6:admin_name        "Henan" ;
         lab6:cityIsLocatedIn   lab6:china ;
         lab6:isAdminCapitalOf  lab6:china ;
@@ -1709,7 +1709,7 @@ lab6:zhengzhou  a              lab6:City , _:b0 , lab6:FirstLevelAdminCapitalCit
         <http://www.w3.org/2002/07/owl#sameAs>
                 lab6:zhengzhou .
 
-lab6:miami  a                 lab6:City , _:b1 , <http://www.w3.org/2002/07/owl#Thing> , <http://www.w3.org/2000/01/rdf-schema#Resource> ;
+lab6:miami  a                 lab6:City , <http://www.w3.org/2002/07/owl#Thing> , _:b0 , <http://www.w3.org/2000/01/rdf-schema#Resource> ;
         lab6:admin_name       "Florida" ;
         lab6:cityIsLocatedIn  lab6:united_states ;
         lab6:isLocatedIn      lab6:united_states ;
@@ -1721,7 +1721,7 @@ lab6:miami  a                 lab6:City , _:b1 , <http://www.w3.org/2002/07/owl#
         <http://www.w3.org/2002/07/owl#sameAs>
                 lab6:miami .
 
-lab6:shaoyang  a              lab6:City , <http://www.w3.org/2002/07/owl#Thing> , _:b1 , <http://www.w3.org/2000/01/rdf-schema#Resource> ;
+lab6:shaoyang  a              lab6:City , <http://www.w3.org/2002/07/owl#Thing> , _:b0 , <http://www.w3.org/2000/01/rdf-schema#Resource> ;
         lab6:admin_name       "Hunan" ;
         lab6:cityIsLocatedIn  lab6:china ;
         lab6:isLocatedIn      lab6:china ;
@@ -1733,7 +1733,7 @@ lab6:shaoyang  a              lab6:City , <http://www.w3.org/2002/07/owl#Thing> 
         <http://www.w3.org/2002/07/owl#sameAs>
                 lab6:shaoyang .
 
-lab6:tehran  a                lab6:City , _:b1 , <http://www.w3.org/2002/07/owl#Thing> , <http://www.w3.org/2000/01/rdf-schema#Resource> , lab6:CapitalCity , _:b4 ;
+lab6:tehran  a                lab6:City , _:b0 , <http://www.w3.org/2002/07/owl#Thing> , <http://www.w3.org/2000/01/rdf-schema#Resource> , _:b4 , lab6:CapitalCity ;
         lab6:admin_name       "Tehrān" ;
         lab6:cityIsLocatedIn  lab6:iran ;
         lab6:isCapitalOf      lab6:iran ;
@@ -1746,7 +1746,7 @@ lab6:tehran  a                lab6:City , _:b1 , <http://www.w3.org/2002/07/owl#
         <http://www.w3.org/2002/07/owl#sameAs>
                 lab6:tehran .
 
-lab6:dar_es_salaam  a         lab6:City , _:b1 , <http://www.w3.org/2002/07/owl#Thing> , <http://www.w3.org/2000/01/rdf-schema#Resource> , _:b4 , lab6:CapitalCity ;
+lab6:dar_es_salaam  a         lab6:City , _:b0 , <http://www.w3.org/2002/07/owl#Thing> , <http://www.w3.org/2000/01/rdf-schema#Resource> , _:b4 , lab6:CapitalCity ;
         lab6:admin_name       "Dar es Salaam" ;
         lab6:cityIsLocatedIn  lab6:tanzania ;
         lab6:isCapitalOf      lab6:tanzania ;
@@ -1759,7 +1759,7 @@ lab6:dar_es_salaam  a         lab6:City , _:b1 , <http://www.w3.org/2002/07/owl#
         <http://www.w3.org/2002/07/owl#sameAs>
                 lab6:dar_es_salaam .
 
-lab6:nagoya  a                 lab6:City , _:b0 , lab6:FirstLevelAdminCapitalCity , <http://www.w3.org/2002/07/owl#Thing> , <http://www.w3.org/2000/01/rdf-schema#Resource> , _:b1 , lab6:AdminCapitalCity ;
+lab6:nagoya  a                 lab6:City , _:b3 , lab6:FirstLevelAdminCapitalCity , <http://www.w3.org/2002/07/owl#Thing> , <http://www.w3.org/2000/01/rdf-schema#Resource> , _:b0 , lab6:AdminCapitalCity ;
         lab6:admin_name        "Aichi" ;
         lab6:cityIsLocatedIn   lab6:japan ;
         lab6:isAdminCapitalOf  lab6:japan ;
@@ -1774,7 +1774,7 @@ lab6:nagoya  a                 lab6:City , _:b0 , lab6:FirstLevelAdminCapitalCit
         <http://www.w3.org/2002/07/owl#sameAs>
                 lab6:nagoya .
 
-lab6:khartoum  a              lab6:City , _:b1 , <http://www.w3.org/2002/07/owl#Thing> , <http://www.w3.org/2000/01/rdf-schema#Resource> , lab6:CapitalCity , _:b4 ;
+lab6:khartoum  a              lab6:City , _:b0 , <http://www.w3.org/2002/07/owl#Thing> , <http://www.w3.org/2000/01/rdf-schema#Resource> , _:b4 , lab6:CapitalCity ;
         lab6:admin_name       "Khartoum" ;
         lab6:cityIsLocatedIn  lab6:sudan ;
         lab6:isCapitalOf      lab6:sudan ;
@@ -1787,7 +1787,7 @@ lab6:khartoum  a              lab6:City , _:b1 , <http://www.w3.org/2002/07/owl#
         <http://www.w3.org/2002/07/owl#sameAs>
                 lab6:khartoum .
 
-lab6:france  a           lab6:Country , <http://www.w3.org/2000/01/rdf-schema#Resource> , _:b2 , <http://www.w3.org/2002/07/owl#Thing> ;
+lab6:france  a           lab6:Country , <http://www.w3.org/2000/01/rdf-schema#Resource> , _:b1 , <http://www.w3.org/2002/07/owl#Thing> ;
         lab6:hasCapital  lab6:paris ;
         lab6:hasCity     lab6:paris ;
         lab6:iso2code    "FR" ;
@@ -1796,7 +1796,7 @@ lab6:france  a           lab6:Country , <http://www.w3.org/2000/01/rdf-schema#Re
         <http://www.w3.org/2002/07/owl#sameAs>
                 lab6:france .
 
-lab6:nanjing  a                lab6:City , _:b0 , lab6:FirstLevelAdminCapitalCity , <http://www.w3.org/2002/07/owl#Thing> , <http://www.w3.org/2000/01/rdf-schema#Resource> , _:b1 , lab6:AdminCapitalCity ;
+lab6:nanjing  a                lab6:City , _:b3 , lab6:FirstLevelAdminCapitalCity , <http://www.w3.org/2002/07/owl#Thing> , <http://www.w3.org/2000/01/rdf-schema#Resource> , _:b0 , lab6:AdminCapitalCity ;
         lab6:admin_name        "Jiangsu" ;
         lab6:cityIsLocatedIn   lab6:china ;
         lab6:isAdminCapitalOf  lab6:china ;
@@ -1811,7 +1811,7 @@ lab6:nanjing  a                lab6:City , _:b0 , lab6:FirstLevelAdminCapitalCit
         <http://www.w3.org/2002/07/owl#sameAs>
                 lab6:nanjing .
 
-lab6:lahore  a                 lab6:City , _:b0 , lab6:FirstLevelAdminCapitalCity , <http://www.w3.org/2002/07/owl#Thing> , <http://www.w3.org/2000/01/rdf-schema#Resource> , _:b1 , lab6:AdminCapitalCity ;
+lab6:lahore  a                 lab6:City , _:b3 , lab6:FirstLevelAdminCapitalCity , <http://www.w3.org/2002/07/owl#Thing> , _:b0 , <http://www.w3.org/2000/01/rdf-schema#Resource> , lab6:AdminCapitalCity ;
         lab6:admin_name        "Punjab" ;
         lab6:cityIsLocatedIn   lab6:pakistan ;
         lab6:isAdminCapitalOf  lab6:pakistan ;
@@ -1826,7 +1826,7 @@ lab6:lahore  a                 lab6:City , _:b0 , lab6:FirstLevelAdminCapitalCit
         <http://www.w3.org/2002/07/owl#sameAs>
                 lab6:lahore .
 
-lab6:chennai  a                lab6:City , _:b0 , lab6:FirstLevelAdminCapitalCity , <http://www.w3.org/2002/07/owl#Thing> , <http://www.w3.org/2000/01/rdf-schema#Resource> , _:b1 , lab6:AdminCapitalCity ;
+lab6:chennai  a                lab6:City , _:b3 , lab6:FirstLevelAdminCapitalCity , <http://www.w3.org/2002/07/owl#Thing> , _:b0 , <http://www.w3.org/2000/01/rdf-schema#Resource> , lab6:AdminCapitalCity ;
         lab6:admin_name        "Tamil Nādu" ;
         lab6:cityIsLocatedIn   lab6:india ;
         lab6:isAdminCapitalOf  lab6:india ;
@@ -1841,7 +1841,7 @@ lab6:chennai  a                lab6:City , _:b0 , lab6:FirstLevelAdminCapitalCit
         <http://www.w3.org/2002/07/owl#sameAs>
                 lab6:chennai .
 
-lab6:changsha  a               lab6:City , _:b0 , lab6:FirstLevelAdminCapitalCity , <http://www.w3.org/2002/07/owl#Thing> , <http://www.w3.org/2000/01/rdf-schema#Resource> , _:b1 , lab6:AdminCapitalCity ;
+lab6:changsha  a               lab6:City , _:b3 , lab6:FirstLevelAdminCapitalCity , <http://www.w3.org/2002/07/owl#Thing> , <http://www.w3.org/2000/01/rdf-schema#Resource> , _:b0 , lab6:AdminCapitalCity ;
         lab6:admin_name        "Hunan" ;
         lab6:cityIsLocatedIn   lab6:china ;
         lab6:isAdminCapitalOf  lab6:china ;
@@ -1856,7 +1856,7 @@ lab6:changsha  a               lab6:City , _:b0 , lab6:FirstLevelAdminCapitalCit
         <http://www.w3.org/2002/07/owl#sameAs>
                 lab6:changsha .
 
-lab6:shanghai  a               lab6:City , _:b0 , lab6:FirstLevelAdminCapitalCity , <http://www.w3.org/2002/07/owl#Thing> , <http://www.w3.org/2000/01/rdf-schema#Resource> , _:b1 , lab6:AdminCapitalCity ;
+lab6:shanghai  a               lab6:City , _:b3 , lab6:FirstLevelAdminCapitalCity , <http://www.w3.org/2002/07/owl#Thing> , <http://www.w3.org/2000/01/rdf-schema#Resource> , _:b0 , lab6:AdminCapitalCity ;
         lab6:admin_name        "Shanghai" ;
         lab6:cityIsLocatedIn   lab6:china ;
         lab6:isAdminCapitalOf  lab6:china ;
@@ -1871,7 +1871,7 @@ lab6:shanghai  a               lab6:City , _:b0 , lab6:FirstLevelAdminCapitalCit
         <http://www.w3.org/2002/07/owl#sameAs>
                 lab6:shanghai .
 
-lab6:chile  a            lab6:Country , <http://www.w3.org/2000/01/rdf-schema#Resource> , _:b2 , <http://www.w3.org/2002/07/owl#Thing> ;
+lab6:chile  a            lab6:Country , <http://www.w3.org/2000/01/rdf-schema#Resource> , _:b1 , <http://www.w3.org/2002/07/owl#Thing> ;
         lab6:hasCapital  lab6:santiago ;
         lab6:hasCity     lab6:santiago ;
         lab6:iso2code    "CL" ;
@@ -1880,7 +1880,7 @@ lab6:chile  a            lab6:Country , <http://www.w3.org/2000/01/rdf-schema#Re
         <http://www.w3.org/2002/07/owl#sameAs>
                 lab6:chile .
 
-lab6:shenzhen  a               lab6:City , lab6:SecondLevelAdminCapitalCity , <http://www.w3.org/2002/07/owl#Thing> , _:b3 , <http://www.w3.org/2000/01/rdf-schema#Resource> , lab6:AdminCapitalCity , _:b1 ;
+lab6:shenzhen  a               lab6:City , lab6:SecondLevelAdminCapitalCity , <http://www.w3.org/2002/07/owl#Thing> , _:b2 , <http://www.w3.org/2000/01/rdf-schema#Resource> , lab6:AdminCapitalCity , _:b0 ;
         lab6:admin_name        "Guangdong" ;
         lab6:cityIsLocatedIn   lab6:china ;
         lab6:isAdminCapitalOf  lab6:china ;
@@ -1895,7 +1895,7 @@ lab6:shenzhen  a               lab6:City , lab6:SecondLevelAdminCapitalCity , <h
         <http://www.w3.org/2002/07/owl#sameAs>
                 lab6:shenzhen .
 
-lab6:changchun  a              lab6:City , _:b0 , lab6:FirstLevelAdminCapitalCity , <http://www.w3.org/2002/07/owl#Thing> , <http://www.w3.org/2000/01/rdf-schema#Resource> , _:b1 , lab6:AdminCapitalCity ;
+lab6:changchun  a              lab6:City , _:b3 , lab6:FirstLevelAdminCapitalCity , <http://www.w3.org/2002/07/owl#Thing> , <http://www.w3.org/2000/01/rdf-schema#Resource> , _:b0 , lab6:AdminCapitalCity ;
         lab6:admin_name        "Jilin" ;
         lab6:cityIsLocatedIn   lab6:china ;
         lab6:isAdminCapitalOf  lab6:china ;
@@ -1910,7 +1910,7 @@ lab6:changchun  a              lab6:City , _:b0 , lab6:FirstLevelAdminCapitalCit
         <http://www.w3.org/2002/07/owl#sameAs>
                 lab6:changchun .
 
-lab6:saudi_arabia  a     lab6:Country , <http://www.w3.org/2000/01/rdf-schema#Resource> , _:b2 , <http://www.w3.org/2002/07/owl#Thing> ;
+lab6:saudi_arabia  a     lab6:Country , <http://www.w3.org/2000/01/rdf-schema#Resource> , _:b1 , <http://www.w3.org/2002/07/owl#Thing> ;
         lab6:hasCapital  lab6:riyadh ;
         lab6:hasCity     lab6:riyadh ;
         lab6:iso2code    "SA" ;
@@ -1919,7 +1919,7 @@ lab6:saudi_arabia  a     lab6:Country , <http://www.w3.org/2000/01/rdf-schema#Re
         <http://www.w3.org/2002/07/owl#sameAs>
                 lab6:saudi_arabia .
 
-lab6:weifang  a               lab6:City , <http://www.w3.org/2002/07/owl#Thing> , _:b1 , <http://www.w3.org/2000/01/rdf-schema#Resource> ;
+lab6:weifang  a               lab6:City , _:b0 , <http://www.w3.org/2002/07/owl#Thing> , <http://www.w3.org/2000/01/rdf-schema#Resource> ;
         lab6:admin_name       "Shandong" ;
         lab6:cityIsLocatedIn  lab6:china ;
         lab6:isLocatedIn      lab6:china ;
@@ -1931,7 +1931,7 @@ lab6:weifang  a               lab6:City , <http://www.w3.org/2002/07/owl#Thing> 
         <http://www.w3.org/2002/07/owl#sameAs>
                 lab6:weifang .
 
-lab6:country  a        lab6:Country , <http://www.w3.org/2000/01/rdf-schema#Resource> , _:b2 , <http://www.w3.org/2002/07/owl#Thing> ;
+lab6:country  a        lab6:Country , <http://www.w3.org/2000/01/rdf-schema#Resource> , _:b1 , <http://www.w3.org/2002/07/owl#Thing> ;
         lab6:hasCity   lab6:city_ascii ;
         lab6:iso2code  "iso2" ;
         lab6:iso3code  "iso3" ;
@@ -1939,7 +1939,7 @@ lab6:country  a        lab6:Country , <http://www.w3.org/2000/01/rdf-schema#Reso
         <http://www.w3.org/2002/07/owl#sameAs>
                 lab6:country .
 
-lab6:oxford  a                <http://www.w3.org/2002/07/owl#NamedIndividual> , <http://www.w3.org/2002/07/owl#Thing> , <http://www.w3.org/2000/01/rdf-schema#Resource> , _:b1 , lab6:City ;
+lab6:oxford  a                <http://www.w3.org/2002/07/owl#NamedIndividual> , <http://www.w3.org/2000/01/rdf-schema#Resource> , <http://www.w3.org/2002/07/owl#Thing> , lab6:City , _:b0 ;
         lab6:cityIsLocatedIn  lab6:united_kingdom ;
         lab6:isLocatedIn      lab6:united_kingdom ;
         lab6:latitude         "51.751163"^^xsd:float ;
@@ -1950,7 +1950,7 @@ lab6:oxford  a                <http://www.w3.org/2002/07/owl#NamedIndividual> , 
         <http://www.w3.org/2002/07/owl#sameAs>
                 lab6:oxford .
 
-lab6:nanyang  a               lab6:City , <http://www.w3.org/2002/07/owl#Thing> , _:b1 , <http://www.w3.org/2000/01/rdf-schema#Resource> ;
+lab6:nanyang  a               lab6:City , _:b0 , <http://www.w3.org/2002/07/owl#Thing> , <http://www.w3.org/2000/01/rdf-schema#Resource> ;
         lab6:admin_name       "Henan" ;
         lab6:cityIsLocatedIn  lab6:china ;
         lab6:isLocatedIn      lab6:china ;
@@ -1962,7 +1962,7 @@ lab6:nanyang  a               lab6:City , <http://www.w3.org/2002/07/owl#Thing> 
         <http://www.w3.org/2002/07/owl#sameAs>
                 lab6:nanyang .
 
-lab6:jining  a                lab6:City , <http://www.w3.org/2002/07/owl#Thing> , _:b1 , <http://www.w3.org/2000/01/rdf-schema#Resource> ;
+lab6:jining  a                lab6:City , <http://www.w3.org/2002/07/owl#Thing> , <http://www.w3.org/2000/01/rdf-schema#Resource> , _:b0 ;
         lab6:admin_name       "Shandong" ;
         lab6:cityIsLocatedIn  lab6:china ;
         lab6:isLocatedIn      lab6:china ;
@@ -1975,7 +1975,7 @@ lab6:jining  a                lab6:City , <http://www.w3.org/2002/07/owl#Thing> 
                 lab6:jining .
 
 <http://www.semanticweb.org/ernesto/inm713/lab6/congo_(kinshasa)>
-        a                lab6:Country , <http://www.w3.org/2000/01/rdf-schema#Resource> , _:b2 , <http://www.w3.org/2002/07/owl#Thing> ;
+        a                lab6:Country , <http://www.w3.org/2000/01/rdf-schema#Resource> , _:b1 , <http://www.w3.org/2002/07/owl#Thing> ;
         lab6:hasCapital  lab6:kinshasa ;
         lab6:hasCity     lab6:kinshasa ;
         lab6:iso2code    "CD" ;
@@ -1984,7 +1984,7 @@ lab6:jining  a                lab6:City , <http://www.w3.org/2002/07/owl#Thing> 
         <http://www.w3.org/2002/07/owl#sameAs>
                 <http://www.semanticweb.org/ernesto/inm713/lab6/congo_(kinshasa)> .
 
-lab6:bangkok  a               lab6:City , _:b1 , <http://www.w3.org/2002/07/owl#Thing> , <http://www.w3.org/2000/01/rdf-schema#Resource> , _:b4 , lab6:CapitalCity ;
+lab6:bangkok  a               lab6:City , _:b0 , <http://www.w3.org/2002/07/owl#Thing> , <http://www.w3.org/2000/01/rdf-schema#Resource> , _:b4 , lab6:CapitalCity ;
         lab6:admin_name       "Krung Thep Maha Nakhon" ;
         lab6:cityIsLocatedIn  lab6:thailand ;
         lab6:isCapitalOf      lab6:thailand ;
@@ -1998,7 +1998,7 @@ lab6:bangkok  a               lab6:City , _:b1 , <http://www.w3.org/2002/07/owl#
                 lab6:bangkok .
 
 <http://www.semanticweb.org/ernesto/inm713/lab6/lu'an>
-        a                      lab6:City , lab6:SecondLevelAdminCapitalCity , <http://www.w3.org/2002/07/owl#Thing> , _:b3 , <http://www.w3.org/2000/01/rdf-schema#Resource> , lab6:AdminCapitalCity , _:b1 ;
+        a                      lab6:City , lab6:SecondLevelAdminCapitalCity , <http://www.w3.org/2002/07/owl#Thing> , _:b2 , <http://www.w3.org/2000/01/rdf-schema#Resource> , lab6:AdminCapitalCity , _:b0 ;
         lab6:admin_name        "Anhui" ;
         lab6:cityIsLocatedIn   lab6:china ;
         lab6:isAdminCapitalOf  lab6:china ;
@@ -2013,7 +2013,7 @@ lab6:bangkok  a               lab6:City , _:b1 , <http://www.w3.org/2002/07/owl#
         <http://www.w3.org/2002/07/owl#sameAs>
                 <http://www.semanticweb.org/ernesto/inm713/lab6/lu'an> .
 
-lab6:moscow  a                lab6:City , _:b1 , <http://www.w3.org/2002/07/owl#Thing> , <http://www.w3.org/2000/01/rdf-schema#Resource> , lab6:CapitalCity , _:b4 ;
+lab6:moscow  a                lab6:City , _:b0 , <http://www.w3.org/2002/07/owl#Thing> , <http://www.w3.org/2000/01/rdf-schema#Resource> , _:b4 , lab6:CapitalCity ;
         lab6:admin_name       "Moskva" ;
         lab6:cityIsLocatedIn  lab6:russia ;
         lab6:isCapitalOf      lab6:russia ;
@@ -2026,7 +2026,7 @@ lab6:moscow  a                lab6:City , _:b1 , <http://www.w3.org/2002/07/owl#
         <http://www.w3.org/2002/07/owl#sameAs>
                 lab6:moscow .
 
-lab6:cairo  a                 lab6:City , _:b1 , <http://www.w3.org/2002/07/owl#Thing> , <http://www.w3.org/2000/01/rdf-schema#Resource> , lab6:CapitalCity , _:b4 ;
+lab6:cairo  a                 lab6:City , _:b0 , <http://www.w3.org/2002/07/owl#Thing> , <http://www.w3.org/2000/01/rdf-schema#Resource> , lab6:CapitalCity , _:b4 ;
         lab6:admin_name       "Al Qāhirah" ;
         lab6:cityIsLocatedIn  lab6:egypt ;
         lab6:isCapitalOf      lab6:egypt ;
@@ -2039,7 +2039,7 @@ lab6:cairo  a                 lab6:City , _:b1 , <http://www.w3.org/2002/07/owl#
         <http://www.w3.org/2002/07/owl#sameAs>
                 lab6:cairo .
 
-lab6:bogota  a                lab6:City , _:b1 , <http://www.w3.org/2002/07/owl#Thing> , <http://www.w3.org/2000/01/rdf-schema#Resource> , _:b4 , lab6:CapitalCity ;
+lab6:bogota  a                lab6:City , _:b0 , <http://www.w3.org/2002/07/owl#Thing> , <http://www.w3.org/2000/01/rdf-schema#Resource> , lab6:CapitalCity , _:b4 ;
         lab6:admin_name       "Bogotá" ;
         lab6:cityIsLocatedIn  lab6:colombia ;
         lab6:isCapitalOf      lab6:colombia ;
@@ -2052,7 +2052,7 @@ lab6:bogota  a                lab6:City , _:b1 , <http://www.w3.org/2002/07/owl#
         <http://www.w3.org/2002/07/owl#sameAs>
                 lab6:bogota .
 
-lab6:osaka  a                  lab6:City , _:b0 , lab6:FirstLevelAdminCapitalCity , <http://www.w3.org/2002/07/owl#Thing> , <http://www.w3.org/2000/01/rdf-schema#Resource> , _:b1 , lab6:AdminCapitalCity ;
+lab6:osaka  a                  lab6:City , _:b3 , lab6:FirstLevelAdminCapitalCity , <http://www.w3.org/2002/07/owl#Thing> , _:b0 , <http://www.w3.org/2000/01/rdf-schema#Resource> , lab6:AdminCapitalCity ;
         lab6:admin_name        "Ōsaka" ;
         lab6:cityIsLocatedIn   lab6:japan ;
         lab6:isAdminCapitalOf  lab6:japan ;
@@ -2067,7 +2067,7 @@ lab6:osaka  a                  lab6:City , _:b0 , lab6:FirstLevelAdminCapitalCit
         <http://www.w3.org/2002/07/owl#sameAs>
                 lab6:osaka .
 
-lab6:china  a                 lab6:Country , <http://www.w3.org/2000/01/rdf-schema#Resource> , <http://www.w3.org/2002/07/owl#Thing> , _:b2 ;
+lab6:china  a                 lab6:Country , <http://www.w3.org/2000/01/rdf-schema#Resource> , <http://www.w3.org/2002/07/owl#Thing> , _:b1 ;
         lab6:hasAdminCapital  lab6:tongshan , lab6:foshan , lab6:quanzhou , lab6:nanchong , lab6:zhanjiang , <http://www.semanticweb.org/ernesto/inm713/lab6/lu'an> , lab6:nantong , lab6:ningbo , lab6:huanggang , lab6:shenzhen , lab6:shangrao , lab6:maoming , lab6:ganzhou , lab6:yichun , lab6:heze , lab6:zhoukou , lab6:dongguan , lab6:yancheng , lab6:shenyang , lab6:changsha , lab6:shanghai , lab6:shijiazhuang , lab6:wuhan , lab6:kunming , lab6:tianjin , lab6:hangzhou , lab6:zhengzhou , <http://www.semanticweb.org/ernesto/inm713/lab6/xi'an> , lab6:guangzhou , lab6:changchun , lab6:hefei , lab6:chengdu , lab6:nanning , lab6:nanjing , lab6:chongqing ;
         lab6:hasCapital       lab6:beijing ;
         lab6:hasCity          lab6:beijing , lab6:xinyang , lab6:hengyang , lab6:tangshan , lab6:weifang , lab6:yantai , lab6:bijie , lab6:luoyang , lab6:zhumadian , lab6:cangzhou , lab6:linyi , lab6:zunyi , lab6:nanyang , lab6:jining , lab6:shaoyang , lab6:fuyang , lab6:baoding , lab6:handan , lab6:tongshan , lab6:foshan , lab6:quanzhou , lab6:nanchong , lab6:zhanjiang , <http://www.semanticweb.org/ernesto/inm713/lab6/lu'an> , lab6:nantong , lab6:ningbo , lab6:huanggang , lab6:shenzhen , lab6:shangrao , lab6:maoming , lab6:ganzhou , lab6:yichun , lab6:heze , lab6:zhoukou , lab6:dongguan , lab6:yancheng , lab6:shenyang , lab6:changsha , lab6:shanghai , lab6:shijiazhuang , lab6:wuhan , lab6:kunming , lab6:tianjin , lab6:hangzhou , lab6:zhengzhou , <http://www.semanticweb.org/ernesto/inm713/lab6/xi'an> , lab6:guangzhou , lab6:changchun , lab6:hefei , lab6:chengdu , lab6:nanning , lab6:nanjing , lab6:chongqing ;
@@ -2077,7 +2077,7 @@ lab6:china  a                 lab6:Country , <http://www.w3.org/2000/01/rdf-sche
         <http://www.w3.org/2002/07/owl#sameAs>
                 lab6:china .
 
-lab6:delhi  a                  lab6:City , _:b0 , lab6:FirstLevelAdminCapitalCity , <http://www.w3.org/2002/07/owl#Thing> , <http://www.w3.org/2000/01/rdf-schema#Resource> , _:b1 , lab6:AdminCapitalCity ;
+lab6:delhi  a                  lab6:City , _:b3 , lab6:FirstLevelAdminCapitalCity , <http://www.w3.org/2002/07/owl#Thing> , _:b0 , <http://www.w3.org/2000/01/rdf-schema#Resource> , lab6:AdminCapitalCity ;
         lab6:admin_name        "Delhi" ;
         lab6:cityIsLocatedIn   lab6:india ;
         lab6:isAdminCapitalOf  lab6:india ;
@@ -2092,7 +2092,7 @@ lab6:delhi  a                  lab6:City , _:b0 , lab6:FirstLevelAdminCapitalCit
         <http://www.w3.org/2002/07/owl#sameAs>
                 lab6:delhi .
 
-lab6:kolkata  a                lab6:City , _:b0 , lab6:FirstLevelAdminCapitalCity , <http://www.w3.org/2002/07/owl#Thing> , <http://www.w3.org/2000/01/rdf-schema#Resource> , _:b1 , lab6:AdminCapitalCity ;
+lab6:kolkata  a                lab6:City , _:b3 , lab6:FirstLevelAdminCapitalCity , <http://www.w3.org/2002/07/owl#Thing> , _:b0 , <http://www.w3.org/2000/01/rdf-schema#Resource> , lab6:AdminCapitalCity ;
         lab6:admin_name        "West Bengal" ;
         lab6:cityIsLocatedIn   lab6:india ;
         lab6:isAdminCapitalOf  lab6:india ;
@@ -2107,7 +2107,7 @@ lab6:kolkata  a                lab6:City , _:b0 , lab6:FirstLevelAdminCapitalCit
         <http://www.w3.org/2002/07/owl#sameAs>
                 lab6:kolkata .
 
-lab6:lagos  a                  lab6:City , lab6:SecondLevelAdminCapitalCity , <http://www.w3.org/2002/07/owl#Thing> , _:b3 , <http://www.w3.org/2000/01/rdf-schema#Resource> , lab6:AdminCapitalCity , _:b1 ;
+lab6:lagos  a                  lab6:City , lab6:SecondLevelAdminCapitalCity , <http://www.w3.org/2002/07/owl#Thing> , _:b2 , <http://www.w3.org/2000/01/rdf-schema#Resource> , lab6:AdminCapitalCity , _:b0 ;
         lab6:admin_name        "Lagos" ;
         lab6:cityIsLocatedIn   lab6:nigeria ;
         lab6:isAdminCapitalOf  lab6:nigeria ;
@@ -2122,7 +2122,7 @@ lab6:lagos  a                  lab6:City , lab6:SecondLevelAdminCapitalCity , <h
         <http://www.w3.org/2002/07/owl#sameAs>
                 lab6:lagos .
 
-lab6:bijie  a                 lab6:City , <http://www.w3.org/2000/01/rdf-schema#Resource> , _:b1 , <http://www.w3.org/2002/07/owl#Thing> ;
+lab6:bijie  a                 lab6:City , <http://www.w3.org/2000/01/rdf-schema#Resource> , <http://www.w3.org/2002/07/owl#Thing> , _:b0 ;
         lab6:admin_name       "Guizhou" ;
         lab6:cityIsLocatedIn  lab6:china ;
         lab6:isLocatedIn      lab6:china ;
@@ -2134,7 +2134,7 @@ lab6:bijie  a                 lab6:City , <http://www.w3.org/2000/01/rdf-schema#
         <http://www.w3.org/2002/07/owl#sameAs>
                 lab6:bijie .
 
-lab6:chongqing  a              lab6:City , _:b0 , lab6:FirstLevelAdminCapitalCity , <http://www.w3.org/2002/07/owl#Thing> , <http://www.w3.org/2000/01/rdf-schema#Resource> , _:b1 , lab6:AdminCapitalCity ;
+lab6:chongqing  a              lab6:City , _:b3 , lab6:FirstLevelAdminCapitalCity , <http://www.w3.org/2002/07/owl#Thing> , <http://www.w3.org/2000/01/rdf-schema#Resource> , _:b0 , lab6:AdminCapitalCity ;
         lab6:admin_name        "Chongqing" ;
         lab6:cityIsLocatedIn   lab6:china ;
         lab6:isAdminCapitalOf  lab6:china ;
@@ -2149,7 +2149,7 @@ lab6:chongqing  a              lab6:City , _:b0 , lab6:FirstLevelAdminCapitalCit
         <http://www.w3.org/2002/07/owl#sameAs>
                 lab6:chongqing .
 
-lab6:zhanjiang  a              lab6:City , lab6:SecondLevelAdminCapitalCity , <http://www.w3.org/2002/07/owl#Thing> , _:b3 , <http://www.w3.org/2000/01/rdf-schema#Resource> , lab6:AdminCapitalCity , _:b1 ;
+lab6:zhanjiang  a              lab6:City , lab6:SecondLevelAdminCapitalCity , <http://www.w3.org/2002/07/owl#Thing> , _:b2 , <http://www.w3.org/2000/01/rdf-schema#Resource> , lab6:AdminCapitalCity , _:b0 ;
         lab6:admin_name        "Guangdong" ;
         lab6:cityIsLocatedIn   lab6:china ;
         lab6:isAdminCapitalOf  lab6:china ;
@@ -2165,7 +2165,7 @@ lab6:zhanjiang  a              lab6:City , lab6:SecondLevelAdminCapitalCity , <h
                 lab6:zhanjiang .
 
 <http://www.semanticweb.org/ernesto/inm713/lab6/korea,_south>
-        a                lab6:Country , <http://www.w3.org/2000/01/rdf-schema#Resource> , _:b2 , <http://www.w3.org/2002/07/owl#Thing> ;
+        a                lab6:Country , <http://www.w3.org/2000/01/rdf-schema#Resource> , _:b1 , <http://www.w3.org/2002/07/owl#Thing> ;
         lab6:hasCapital  lab6:seoul ;
         lab6:hasCity     lab6:seoul ;
         lab6:iso2code    "KR" ;
@@ -2174,7 +2174,7 @@ lab6:zhanjiang  a              lab6:City , lab6:SecondLevelAdminCapitalCity , <h
         <http://www.w3.org/2002/07/owl#sameAs>
                 <http://www.semanticweb.org/ernesto/inm713/lab6/korea,_south> .
 
-lab6:tokyo  a                 lab6:City , _:b1 , <http://www.w3.org/2002/07/owl#Thing> , <http://www.w3.org/2000/01/rdf-schema#Resource> , lab6:CapitalCity , _:b4 ;
+lab6:tokyo  a                 lab6:City , _:b0 , <http://www.w3.org/2002/07/owl#Thing> , <http://www.w3.org/2000/01/rdf-schema#Resource> , _:b4 , lab6:CapitalCity ;
         lab6:admin_name       "Tōkyō" ;
         lab6:cityIsLocatedIn  lab6:japan ;
         lab6:isCapitalOf      lab6:japan ;
@@ -2187,7 +2187,7 @@ lab6:tokyo  a                 lab6:City , _:b1 , <http://www.w3.org/2002/07/owl#
         <http://www.w3.org/2002/07/owl#sameAs>
                 lab6:tokyo .
 
-lab6:quanzhou  a               lab6:City , lab6:SecondLevelAdminCapitalCity , <http://www.w3.org/2002/07/owl#Thing> , _:b3 , <http://www.w3.org/2000/01/rdf-schema#Resource> , lab6:AdminCapitalCity , _:b1 ;
+lab6:quanzhou  a               lab6:City , lab6:SecondLevelAdminCapitalCity , <http://www.w3.org/2002/07/owl#Thing> , _:b2 , <http://www.w3.org/2000/01/rdf-schema#Resource> , lab6:AdminCapitalCity , _:b0 ;
         lab6:admin_name        "Fujian" ;
         lab6:cityIsLocatedIn   lab6:china ;
         lab6:isAdminCapitalOf  lab6:china ;
@@ -2202,7 +2202,7 @@ lab6:quanzhou  a               lab6:City , lab6:SecondLevelAdminCapitalCity , <h
         <http://www.w3.org/2002/07/owl#sameAs>
                 lab6:quanzhou .
 
-lab6:nanchong  a               lab6:City , lab6:SecondLevelAdminCapitalCity , <http://www.w3.org/2002/07/owl#Thing> , _:b3 , <http://www.w3.org/2000/01/rdf-schema#Resource> , lab6:AdminCapitalCity , _:b1 ;
+lab6:nanchong  a               lab6:City , lab6:SecondLevelAdminCapitalCity , <http://www.w3.org/2002/07/owl#Thing> , _:b2 , <http://www.w3.org/2000/01/rdf-schema#Resource> , lab6:AdminCapitalCity , _:b0 ;
         lab6:admin_name        "Sichuan" ;
         lab6:cityIsLocatedIn   lab6:china ;
         lab6:isAdminCapitalOf  lab6:china ;
@@ -2217,7 +2217,7 @@ lab6:nanchong  a               lab6:City , lab6:SecondLevelAdminCapitalCity , <h
         <http://www.w3.org/2002/07/owl#sameAs>
                 lab6:nanchong .
 
-lab6:bangalore  a              lab6:City , _:b0 , lab6:FirstLevelAdminCapitalCity , <http://www.w3.org/2002/07/owl#Thing> , <http://www.w3.org/2000/01/rdf-schema#Resource> , _:b1 , lab6:AdminCapitalCity ;
+lab6:bangalore  a              lab6:City , _:b3 , lab6:FirstLevelAdminCapitalCity , <http://www.w3.org/2002/07/owl#Thing> , <http://www.w3.org/2000/01/rdf-schema#Resource> , _:b0 , lab6:AdminCapitalCity ;
         lab6:admin_name        "Karnātaka" ;
         lab6:cityIsLocatedIn   lab6:india ;
         lab6:isAdminCapitalOf  lab6:india ;
@@ -2232,7 +2232,7 @@ lab6:bangalore  a              lab6:City , _:b0 , lab6:FirstLevelAdminCapitalCit
         <http://www.w3.org/2002/07/owl#sameAs>
                 lab6:bangalore .
 
-lab6:seoul  a                 lab6:City , _:b1 , <http://www.w3.org/2002/07/owl#Thing> , <http://www.w3.org/2000/01/rdf-schema#Resource> , _:b4 , lab6:CapitalCity ;
+lab6:seoul  a                 lab6:City , _:b0 , <http://www.w3.org/2002/07/owl#Thing> , <http://www.w3.org/2000/01/rdf-schema#Resource> , _:b4 , lab6:CapitalCity ;
         lab6:admin_name       "Seoul" ;
         lab6:cityIsLocatedIn  <http://www.semanticweb.org/ernesto/inm713/lab6/korea,_south> ;
         lab6:isCapitalOf      <http://www.semanticweb.org/ernesto/inm713/lab6/korea,_south> ;
@@ -2245,7 +2245,7 @@ lab6:seoul  a                 lab6:City , _:b1 , <http://www.w3.org/2002/07/owl#
         <http://www.w3.org/2002/07/owl#sameAs>
                 lab6:seoul .
 
-lab6:kinshasa  a              lab6:City , _:b1 , <http://www.w3.org/2002/07/owl#Thing> , <http://www.w3.org/2000/01/rdf-schema#Resource> , lab6:CapitalCity , _:b4 ;
+lab6:kinshasa  a              lab6:City , _:b0 , <http://www.w3.org/2002/07/owl#Thing> , <http://www.w3.org/2000/01/rdf-schema#Resource> , lab6:CapitalCity , _:b4 ;
         lab6:admin_name       "Kinshasa" ;
         lab6:cityIsLocatedIn  <http://www.semanticweb.org/ernesto/inm713/lab6/congo_(kinshasa)> ;
         lab6:isCapitalOf      <http://www.semanticweb.org/ernesto/inm713/lab6/congo_(kinshasa)> ;
@@ -2258,7 +2258,7 @@ lab6:kinshasa  a              lab6:City , _:b1 , <http://www.w3.org/2002/07/owl#
         <http://www.w3.org/2002/07/owl#sameAs>
                 lab6:kinshasa .
 
-lab6:hangzhou  a               lab6:City , _:b0 , lab6:FirstLevelAdminCapitalCity , <http://www.w3.org/2002/07/owl#Thing> , <http://www.w3.org/2000/01/rdf-schema#Resource> , _:b1 , lab6:AdminCapitalCity ;
+lab6:hangzhou  a               lab6:City , _:b3 , lab6:FirstLevelAdminCapitalCity , <http://www.w3.org/2002/07/owl#Thing> , _:b0 , <http://www.w3.org/2000/01/rdf-schema#Resource> , lab6:AdminCapitalCity ;
         lab6:admin_name        "Zhejiang" ;
         lab6:cityIsLocatedIn   lab6:china ;
         lab6:isAdminCapitalOf  lab6:china ;
@@ -2273,7 +2273,7 @@ lab6:hangzhou  a               lab6:City , _:b0 , lab6:FirstLevelAdminCapitalCit
         <http://www.w3.org/2002/07/owl#sameAs>
                 lab6:hangzhou .
 
-lab6:santiago  a              lab6:City , _:b1 , <http://www.w3.org/2002/07/owl#Thing> , <http://www.w3.org/2000/01/rdf-schema#Resource> , lab6:CapitalCity , _:b4 ;
+lab6:santiago  a              lab6:City , _:b0 , <http://www.w3.org/2002/07/owl#Thing> , <http://www.w3.org/2000/01/rdf-schema#Resource> , _:b4 , lab6:CapitalCity ;
         lab6:admin_name       "Región Metropolitana" ;
         lab6:cityIsLocatedIn  lab6:chile ;
         lab6:isCapitalOf      lab6:chile ;
@@ -2286,7 +2286,7 @@ lab6:santiago  a              lab6:City , _:b1 , <http://www.w3.org/2002/07/owl#
         <http://www.w3.org/2002/07/owl#sameAs>
                 lab6:santiago .
 
-lab6:hyderabad  a              lab6:City , _:b0 , lab6:FirstLevelAdminCapitalCity , <http://www.w3.org/2002/07/owl#Thing> , <http://www.w3.org/2000/01/rdf-schema#Resource> , _:b1 , lab6:AdminCapitalCity ;
+lab6:hyderabad  a              lab6:City , _:b3 , lab6:FirstLevelAdminCapitalCity , <http://www.w3.org/2002/07/owl#Thing> , _:b0 , <http://www.w3.org/2000/01/rdf-schema#Resource> , lab6:AdminCapitalCity ;
         lab6:admin_name        "Telangana" ;
         lab6:cityIsLocatedIn   lab6:india ;
         lab6:isAdminCapitalOf  lab6:india ;
@@ -2301,7 +2301,7 @@ lab6:hyderabad  a              lab6:City , _:b0 , lab6:FirstLevelAdminCapitalCit
         <http://www.w3.org/2002/07/owl#sameAs>
                 lab6:hyderabad .
 
-lab6:hengyang  a              lab6:City , _:b1 , <http://www.w3.org/2000/01/rdf-schema#Resource> , <http://www.w3.org/2002/07/owl#Thing> ;
+lab6:hengyang  a              lab6:City , _:b0 , <http://www.w3.org/2002/07/owl#Thing> , <http://www.w3.org/2000/01/rdf-schema#Resource> ;
         lab6:admin_name       "Hunan" ;
         lab6:cityIsLocatedIn  lab6:china ;
         lab6:isLocatedIn      lab6:china ;
@@ -2313,7 +2313,7 @@ lab6:hengyang  a              lab6:City , _:b1 , <http://www.w3.org/2000/01/rdf-
         <http://www.w3.org/2002/07/owl#sameAs>
                 lab6:hengyang .
 
-lab6:heze  a                   lab6:City , lab6:SecondLevelAdminCapitalCity , <http://www.w3.org/2002/07/owl#Thing> , _:b3 , <http://www.w3.org/2000/01/rdf-schema#Resource> , lab6:AdminCapitalCity , _:b1 ;
+lab6:heze  a                   lab6:City , lab6:SecondLevelAdminCapitalCity , <http://www.w3.org/2002/07/owl#Thing> , _:b2 , <http://www.w3.org/2000/01/rdf-schema#Resource> , lab6:AdminCapitalCity , _:b0 ;
         lab6:admin_name        "Shandong" ;
         lab6:cityIsLocatedIn   lab6:china ;
         lab6:isAdminCapitalOf  lab6:china ;
@@ -2328,7 +2328,7 @@ lab6:heze  a                   lab6:City , lab6:SecondLevelAdminCapitalCity , <h
         <http://www.w3.org/2002/07/owl#sameAs>
                 lab6:heze .
 
-lab6:philippines  a      lab6:Country , <http://www.w3.org/2000/01/rdf-schema#Resource> , _:b2 , <http://www.w3.org/2002/07/owl#Thing> ;
+lab6:philippines  a      lab6:Country , <http://www.w3.org/2000/01/rdf-schema#Resource> , _:b1 , <http://www.w3.org/2002/07/owl#Thing> ;
         lab6:hasCapital  lab6:manila ;
         lab6:hasCity     lab6:manila ;
         lab6:iso2code    "PH" ;
@@ -2337,7 +2337,7 @@ lab6:philippines  a      lab6:Country , <http://www.w3.org/2000/01/rdf-schema#Re
         <http://www.w3.org/2002/07/owl#sameAs>
                 lab6:philippines .
 
-lab6:zunyi  a                 lab6:City , <http://www.w3.org/2002/07/owl#Thing> , _:b1 , <http://www.w3.org/2000/01/rdf-schema#Resource> ;
+lab6:zunyi  a                 lab6:City , <http://www.w3.org/2002/07/owl#Thing> , <http://www.w3.org/2000/01/rdf-schema#Resource> , _:b0 ;
         lab6:admin_name       "Guizhou" ;
         lab6:cityIsLocatedIn  lab6:china ;
         lab6:isLocatedIn      lab6:china ;
@@ -2349,7 +2349,7 @@ lab6:zunyi  a                 lab6:City , <http://www.w3.org/2002/07/owl#Thing> 
         <http://www.w3.org/2002/07/owl#sameAs>
                 lab6:zunyi .
 
-lab6:yancheng  a               lab6:City , lab6:SecondLevelAdminCapitalCity , <http://www.w3.org/2002/07/owl#Thing> , _:b3 , <http://www.w3.org/2000/01/rdf-schema#Resource> , lab6:AdminCapitalCity , _:b1 ;
+lab6:yancheng  a               lab6:City , lab6:SecondLevelAdminCapitalCity , <http://www.w3.org/2002/07/owl#Thing> , _:b2 , <http://www.w3.org/2000/01/rdf-schema#Resource> , lab6:AdminCapitalCity , _:b0 ;
         lab6:admin_name        "Jiangsu" ;
         lab6:cityIsLocatedIn   lab6:china ;
         lab6:isAdminCapitalOf  lab6:china ;
@@ -2364,7 +2364,7 @@ lab6:yancheng  a               lab6:City , lab6:SecondLevelAdminCapitalCity , <h
         <http://www.w3.org/2002/07/owl#sameAs>
                 lab6:yancheng .
 
-lab6:hanoi  a                 lab6:City , _:b1 , <http://www.w3.org/2002/07/owl#Thing> , <http://www.w3.org/2000/01/rdf-schema#Resource> , lab6:CapitalCity , _:b4 ;
+lab6:hanoi  a                 lab6:City , _:b0 , <http://www.w3.org/2002/07/owl#Thing> , <http://www.w3.org/2000/01/rdf-schema#Resource> , _:b4 , lab6:CapitalCity ;
         lab6:admin_name       "Hà Nội" ;
         lab6:cityIsLocatedIn  lab6:vietnam ;
         lab6:isCapitalOf      lab6:vietnam ;
@@ -2377,7 +2377,7 @@ lab6:hanoi  a                 lab6:City , _:b1 , <http://www.w3.org/2002/07/owl#
         <http://www.w3.org/2002/07/owl#sameAs>
                 lab6:hanoi .
 
-lab6:tanzania  a         lab6:Country , <http://www.w3.org/2000/01/rdf-schema#Resource> , _:b2 , <http://www.w3.org/2002/07/owl#Thing> ;
+lab6:tanzania  a         lab6:Country , <http://www.w3.org/2000/01/rdf-schema#Resource> , _:b1 , <http://www.w3.org/2002/07/owl#Thing> ;
         lab6:hasCapital  lab6:dar_es_salaam ;
         lab6:hasCity     lab6:dar_es_salaam ;
         lab6:iso2code    "TZ" ;
@@ -2386,7 +2386,7 @@ lab6:tanzania  a         lab6:Country , <http://www.w3.org/2000/01/rdf-schema#Re
         <http://www.w3.org/2002/07/owl#sameAs>
                 lab6:tanzania .
 
-lab6:istanbul  a               lab6:City , _:b0 , lab6:FirstLevelAdminCapitalCity , <http://www.w3.org/2002/07/owl#Thing> , <http://www.w3.org/2000/01/rdf-schema#Resource> , _:b1 , lab6:AdminCapitalCity ;
+lab6:istanbul  a               lab6:City , _:b3 , lab6:FirstLevelAdminCapitalCity , <http://www.w3.org/2002/07/owl#Thing> , <http://www.w3.org/2000/01/rdf-schema#Resource> , _:b0 , lab6:AdminCapitalCity ;
         lab6:admin_name        "İstanbul" ;
         lab6:cityIsLocatedIn   lab6:turkey ;
         lab6:isAdminCapitalOf  lab6:turkey ;
@@ -2401,7 +2401,7 @@ lab6:istanbul  a               lab6:City , _:b0 , lab6:FirstLevelAdminCapitalCit
         <http://www.w3.org/2002/07/owl#sameAs>
                 lab6:istanbul .
 
-lab6:maoming  a                lab6:City , lab6:SecondLevelAdminCapitalCity , <http://www.w3.org/2002/07/owl#Thing> , _:b3 , <http://www.w3.org/2000/01/rdf-schema#Resource> , lab6:AdminCapitalCity , _:b1 ;
+lab6:maoming  a                lab6:City , lab6:SecondLevelAdminCapitalCity , <http://www.w3.org/2002/07/owl#Thing> , _:b2 , <http://www.w3.org/2000/01/rdf-schema#Resource> , lab6:AdminCapitalCity , _:b0 ;
         lab6:admin_name        "Guangdong" ;
         lab6:cityIsLocatedIn   lab6:china ;
         lab6:isAdminCapitalOf  lab6:china ;
@@ -2416,7 +2416,7 @@ lab6:maoming  a                lab6:City , lab6:SecondLevelAdminCapitalCity , <h
         <http://www.w3.org/2002/07/owl#sameAs>
                 lab6:maoming .
 
-lab6:karachi  a                lab6:City , _:b0 , lab6:FirstLevelAdminCapitalCity , <http://www.w3.org/2002/07/owl#Thing> , <http://www.w3.org/2000/01/rdf-schema#Resource> , _:b1 , lab6:AdminCapitalCity ;
+lab6:karachi  a                lab6:City , _:b3 , lab6:FirstLevelAdminCapitalCity , <http://www.w3.org/2002/07/owl#Thing> , <http://www.w3.org/2000/01/rdf-schema#Resource> , _:b0 , lab6:AdminCapitalCity ;
         lab6:admin_name        "Sindh" ;
         lab6:cityIsLocatedIn   lab6:pakistan ;
         lab6:isAdminCapitalOf  lab6:pakistan ;

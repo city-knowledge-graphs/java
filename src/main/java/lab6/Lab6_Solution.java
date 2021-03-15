@@ -453,20 +453,55 @@ public class Lab6_Solution {
     }
     
     
+    
+    public void performSPARQLQueryLab7(Model model) {
+    	    
+    	//Using the generated RDF graph from the World Cities dataset (lab session6), 
+    	//create a SPARQL query that counts the cities in each country.  
+    	//Order by number of cities. Test it programmatically.
+       String queryStr = 
+            "PREFIX lab6: <http://www.semanticweb.org/ernesto/inm713/lab6/>\n" +
+           	"PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> \n" +
+        	"PREFIX xsd: <http://www.w3.org/2001/XMLSchema#> \n" +
+           	"SELECT DISTINCT ?country (COUNT(?city) AS ?num_cities) WHERE { \n" +
+            "?country lab6:hasCity ?city .  \n" +
+            //"FILTER (?pop > xsd:integer(\"5000000\"))" +
+        "\n}"+
+        "GROUP BY ?country\n" +
+        "ORDER BY DESC(?num_cities)" 
+        //"ORDER BY DESC(COUNT(?city))";
+        ;
 
-        
-    	/*f_out = open(file_query_out,"w+")
-
-        for row in qres:
-            #Row is a list of matched RDF terms: URIs, literals or blank nodes
-            line_str = '\"%s\",\"%s\",\"%s\"\n' % (row.country, row.city, row.pop)
-
-
-            f_out.write(line_str)
-            
-     
-        f_out.close()       
-        */
+        Query q = QueryFactory.create(queryStr);
+		
+		QueryExecution qe =
+				QueryExecutionFactory.create(q, model);
+		try {
+			ResultSet res = qe.execSelect();
+				
+			int solutions = 0;
+				
+			while( res.hasNext()) {
+				solutions++;
+				QuerySolution soln = res.next();
+				RDFNode country = soln.get("?country");
+				RDFNode cities = soln.get("?num_cities");
+				
+				System.out.println(country.asResource().getURI() + " " + cities.asLiteral().getValue());
+				
+				
+			}
+			    
+		} finally {
+			qe.close();
+		}
+		
+		
+    
+				
+    }
+    
+    
      
     
     public void saveGraph(Model model, String file_output) throws FileNotFoundException {
@@ -521,6 +556,10 @@ public class Lab6_Solution {
 				    
 			//SPARQL results into CSV
 			solution.performSPARQLQuery(solution.inf_model, file.replace(".csv", "-"+task)+"-query-results.csv");				    
+			
+			
+			//SPARQL lab7
+			solution.performSPARQLQueryLab7(solution.inf_model);				    
 			
 			
 			
