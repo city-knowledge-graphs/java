@@ -8,7 +8,7 @@ rdfs:domain  a              rdf:Property , rdfs:Resource ;
         rdfs:range          rdfs:Class , rdfs:Resource ;
         rdfs:subPropertyOf  rdfs:domain .
 
-owl:DatatypeProperty  a  rdfs:Resource , rdfs:Class ;
+owl:DatatypeProperty  a  rdfs:Class , rdfs:Resource ;
         rdfs:subClassOf  rdf:Property .
 
 owl:Property  a              rdfs:Class , rdfs:Resource , owl:Class ;
@@ -37,7 +37,7 @@ owl:backwardCompatibleWith
         rdfs:subPropertyOf  owl:backwardCompatibleWith .
 
 :Person  a                   rdfs:Class , owl:Class , rdfs:Resource ;
-        rdfs:subClassOf      rdfs:Resource , :Person , owl:Thing ;
+        rdfs:subClassOf      :Person , rdfs:Resource , owl:Thing ;
         owl:equivalentClass  :Person .
 
 owl:Ontology  a              rdfs:Class , rdfs:Resource , owl:Class ;
@@ -59,7 +59,7 @@ owl:onProperty  a           rdf:Property , rdfs:Resource ;
         rdfs:range          owl:Property , rdfs:Resource ;
         rdfs:subPropertyOf  owl:onProperty .
 
-owl:differentFrom  a        owl:SymmetricProperty , rdf:Property , owl:ObjectProperty , rdfs:Resource ;
+owl:differentFrom  a        owl:SymmetricProperty , owl:ObjectProperty , rdf:Property , rdfs:Resource ;
         rdfs:subPropertyOf  owl:differentFrom .
 
 rdf:object  a               rdf:Property , rdfs:Resource ;
@@ -71,7 +71,7 @@ rdfs:subPropertyOf  a       rdf:Property , rdfs:Resource ;
         rdfs:range          rdf:Property , rdfs:Resource ;
         rdfs:subPropertyOf  rdfs:subPropertyOf .
 
-owl:disjointWith  a         owl:SymmetricProperty , rdf:Property , rdfs:Resource , owl:ObjectProperty ;
+owl:disjointWith  a         owl:SymmetricProperty , owl:ObjectProperty , rdf:Property , rdfs:Resource ;
         rdfs:domain         owl:Class , rdfs:Class , rdfs:Resource ;
         rdfs:range          owl:Class , rdfs:Class , rdfs:Resource ;
         rdfs:subPropertyOf  owl:disjointWith .
@@ -84,7 +84,7 @@ owl:Class  a                 rdfs:Class , rdfs:Resource , owl:Class ;
         owl:equivalentClass  owl:Class .
 
 <http://www.w3.org/2001/XMLSchema#duration>
-        a                 rdfs:Datatype , rdfs:Class , rdfs:Resource , owl:Class ;
+        a                 rdfs:Datatype , rdfs:Resource , rdfs:Class , owl:Class ;
         owl:disjointWith  <http://www.w3.org/2001/XMLSchema#long> , <http://www.w3.org/2001/XMLSchema#byte> , <http://www.w3.org/2001/XMLSchema#unsignedShort> , <http://www.w3.org/2001/XMLSchema#time> , <http://www.w3.org/2001/XMLSchema#unsignedLong> , <http://www.w3.org/2001/XMLSchema#float> , <http://www.w3.org/2001/XMLSchema#dateTime> , <http://www.w3.org/2001/XMLSchema#int> , <http://www.w3.org/2001/XMLSchema#string> , <http://www.w3.org/2001/XMLSchema#unsignedInt> , <http://www.w3.org/2001/XMLSchema#short> , <http://www.w3.org/2001/XMLSchema#nonNegativeInteger> , <http://www.w3.org/2001/XMLSchema#unsignedByte> , <http://www.w3.org/2001/XMLSchema#date> , <http://www.w3.org/2001/XMLSchema#integer> , <http://www.w3.org/2001/XMLSchema#decimal> , <http://www.w3.org/2001/XMLSchema#boolean> , <http://www.w3.org/2001/XMLSchema#nonPositiveInteger> .
 
 rdf:List  a                  rdfs:Class , rdfs:Resource , owl:Class ;
@@ -92,18 +92,18 @@ rdf:List  a                  rdfs:Class , rdfs:Resource , owl:Class ;
         owl:equivalentClass  rdf:List .
 
 :Father  a                   rdfs:Class , owl:Class , rdfs:Resource ;
-        rdfs:subClassOf      owl:Thing , rdfs:Resource , :Father , :Parent , :Man , :Person ;
+        rdfs:subClassOf      owl:Thing , :Father , rdfs:Resource , :Parent , :Man , :Person ;
         owl:equivalentClass  :Father .
 
 rdf:Statement  a             rdfs:Class , rdfs:Resource , owl:Class ;
         rdfs:subClassOf      rdfs:Resource , rdf:Statement ;
         owl:equivalentClass  rdf:Statement .
 
-rdf:Seq  a               rdfs:Resource , rdfs:Class ;
+rdf:Seq  a               rdfs:Class , rdfs:Resource ;
         rdfs:subClassOf  rdfs:Container .
 
 <http://www.w3.org/2001/XMLSchema#double>
-        a       rdfs:Datatype , rdfs:Resource , rdfs:Class .
+        a       rdfs:Datatype , rdfs:Class , rdfs:Resource .
 
 <http://www.w3.org/2001/XMLSchema#gMonth>
         a       rdfs:Datatype , rdfs:Class , rdfs:Resource .
@@ -147,7 +147,7 @@ rdf:Property  a              rdfs:Class , rdfs:Resource , owl:Class ;
         owl:disjointWith     <http://www.w3.org/2001/XMLSchema#time> , <http://www.w3.org/2001/XMLSchema#float> , <http://www.w3.org/2001/XMLSchema#dateTime> , <http://www.w3.org/2001/XMLSchema#string> , <http://www.w3.org/2001/XMLSchema#duration> , <http://www.w3.org/2001/XMLSchema#date> , <http://www.w3.org/2001/XMLSchema#boolean> ;
         owl:equivalentClass  <http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
 
-owl:sameAs  a               owl:SymmetricProperty , rdf:Property , owl:ObjectProperty , rdfs:Resource ;
+owl:sameAs  a               owl:SymmetricProperty , owl:ObjectProperty , rdf:Property , rdfs:Resource ;
         rdfs:subPropertyOf  owl:sameAs .
 
 rdf:XMLLiteral  a  rdfs:Datatype , rdfs:Resource , rdfs:Class .
@@ -159,7 +159,7 @@ rdf:XMLLiteral  a  rdfs:Datatype , rdfs:Resource , rdfs:Class .
         owl:equivalentClass  <http://www.w3.org/2001/XMLSchema#unsignedShort> .
 
 <http://www.w3.org/2001/XMLSchema#gDay>
-        a       rdfs:Datatype , rdfs:Class , rdfs:Resource .
+        a       rdfs:Datatype , rdfs:Resource , rdfs:Class .
 
 rdf:nil  a      rdf:List , rdfs:Resource .
 
@@ -180,7 +180,7 @@ owl:Nothing  a               owl:Class , rdfs:Class , rdfs:Resource ;
         owl:equivalentClass  owl:Nothing .
 
 owl:InverseFunctionalProperty
-        a                rdfs:Resource , rdfs:Class ;
+        a                rdfs:Class , rdfs:Resource ;
         rdfs:subClassOf  owl:ObjectProperty .
 
 <http://www.w3.org/2001/XMLSchema#hexBinary>
@@ -207,12 +207,8 @@ rdf:Bag  a               rdfs:Resource , rdfs:Class ;
         a                 rdfs:Datatype , rdfs:Class , rdfs:Resource , owl:Class ;
         owl:disjointWith  <http://www.w3.org/2001/XMLSchema#long> , <http://www.w3.org/2001/XMLSchema#byte> , <http://www.w3.org/2001/XMLSchema#unsignedShort> , <http://www.w3.org/2001/XMLSchema#time> , <http://www.w3.org/2001/XMLSchema#unsignedLong> , <http://www.w3.org/2001/XMLSchema#float> , <http://www.w3.org/2001/XMLSchema#int> , <http://www.w3.org/2001/XMLSchema#string> , <http://www.w3.org/2001/XMLSchema#unsignedInt> , <http://www.w3.org/2001/XMLSchema#short> , <http://www.w3.org/2001/XMLSchema#nonNegativeInteger> , <http://www.w3.org/2001/XMLSchema#duration> , <http://www.w3.org/2001/XMLSchema#unsignedByte> , <http://www.w3.org/2001/XMLSchema#date> , <http://www.w3.org/2001/XMLSchema#integer> , <http://www.w3.org/2001/XMLSchema#decimal> , <http://www.w3.org/2001/XMLSchema#boolean> , <http://www.w3.org/2001/XMLSchema#nonPositiveInteger> .
 
-:Man    a                    rdfs:Class , owl:Class , rdfs:Resource ;
-        rdfs:subClassOf      rdfs:Resource , :Man , owl:Thing , :Person ;
-        owl:equivalentClass  :Man .
-
 <http://www.w3.org/2001/XMLSchema#date>
-        a                 rdfs:Datatype , rdfs:Resource , rdfs:Class , owl:Class ;
+        a                 rdfs:Datatype , rdfs:Class , rdfs:Resource , owl:Class ;
         owl:disjointWith  <http://www.w3.org/2001/XMLSchema#long> , <http://www.w3.org/2001/XMLSchema#byte> , <http://www.w3.org/2001/XMLSchema#unsignedShort> , <http://www.w3.org/2001/XMLSchema#time> , <http://www.w3.org/2001/XMLSchema#unsignedLong> , <http://www.w3.org/2001/XMLSchema#float> , <http://www.w3.org/2001/XMLSchema#dateTime> , <http://www.w3.org/2001/XMLSchema#int> , <http://www.w3.org/2001/XMLSchema#string> , <http://www.w3.org/2001/XMLSchema#unsignedInt> , <http://www.w3.org/2001/XMLSchema#short> , <http://www.w3.org/2001/XMLSchema#nonNegativeInteger> , <http://www.w3.org/2001/XMLSchema#duration> , <http://www.w3.org/2001/XMLSchema#unsignedByte> , <http://www.w3.org/2001/XMLSchema#integer> , <http://www.w3.org/2001/XMLSchema#decimal> , <http://www.w3.org/2001/XMLSchema#boolean> , <http://www.w3.org/2001/XMLSchema#nonPositiveInteger> .
 
 <http://www.w3.org/2001/XMLSchema#int>
@@ -220,6 +216,10 @@ rdf:Bag  a               rdfs:Resource , rdfs:Class ;
         rdfs:subClassOf      <http://www.w3.org/2001/XMLSchema#int> , <http://www.w3.org/2001/XMLSchema#integer> , <http://www.w3.org/2001/XMLSchema#long> ;
         owl:disjointWith     <http://www.w3.org/2001/XMLSchema#time> , <http://www.w3.org/2001/XMLSchema#float> , <http://www.w3.org/2001/XMLSchema#dateTime> , <http://www.w3.org/2001/XMLSchema#string> , <http://www.w3.org/2001/XMLSchema#duration> , <http://www.w3.org/2001/XMLSchema#date> , <http://www.w3.org/2001/XMLSchema#boolean> ;
         owl:equivalentClass  <http://www.w3.org/2001/XMLSchema#int> .
+
+:Man    a                    rdfs:Class , owl:Class , rdfs:Resource ;
+        rdfs:subClassOf      :Man , rdfs:Resource , owl:Thing , :Person ;
+        owl:equivalentClass  :Man .
 
 rdf:predicate  a            rdf:Property , rdfs:Resource ;
         rdfs:domain         rdf:Statement , rdfs:Resource ;
@@ -260,7 +260,7 @@ rdf:rest  a                 rdf:Property , owl:FunctionalProperty , rdfs:Resourc
         rdfs:subPropertyOf  rdf:rest .
 
 owl:TransitiveProperty
-        a                rdfs:Class , rdfs:Resource ;
+        a                rdfs:Resource , rdfs:Class ;
         rdfs:subClassOf  owl:ObjectProperty .
 
 owl:equivalentClass  a      rdf:Property , rdfs:Resource ;
@@ -275,7 +275,7 @@ owl:equivalentClass  a      rdf:Property , rdfs:Resource ;
         owl:equivalentClass  <http://www.w3.org/2001/XMLSchema#short> .
 
 :Woman  a                    rdfs:Class , owl:Class , rdfs:Resource ;
-        rdfs:subClassOf      rdfs:Resource , :Woman , owl:Thing , :Person ;
+        rdfs:subClassOf      :Woman , rdfs:Resource , owl:Thing , :Person ;
         owl:equivalentClass  :Woman .
 
 <http://www.w3.org/2001/XMLSchema#positiveInteger>
@@ -295,10 +295,10 @@ rdfs:Datatype  a         rdfs:Class , rdfs:Resource ;
         rdfs:subClassOf  rdfs:Class .
 
 <http://www.w3.org/2001/XMLSchema#anyURI>
-        a       rdfs:Datatype , rdfs:Resource , rdfs:Class .
+        a       rdfs:Datatype , rdfs:Class , rdfs:Resource .
 
 :Mother  a                   rdfs:Class , owl:Class , rdfs:Resource ;
-        rdfs:subClassOf      owl:Thing , rdfs:Resource , :Mother , :Parent , :Woman , :Person ;
+        rdfs:subClassOf      owl:Thing , :Mother , rdfs:Resource , :Parent , :Woman , :Person ;
         owl:equivalentClass  :Mother .
 
 <http://www.w3.org/2001/XMLSchema#long>
@@ -308,7 +308,7 @@ rdfs:Datatype  a         rdfs:Class , rdfs:Resource ;
         owl:equivalentClass  <http://www.w3.org/2001/XMLSchema#long> .
 
 <http://www.w3.org/2001/XMLSchema#base64Binary>
-        a       rdfs:Datatype , rdfs:Class , rdfs:Resource .
+        a       rdfs:Datatype , rdfs:Resource , rdfs:Class .
 
 :hasMother  a               rdf:Property , owl:ObjectProperty , rdfs:Resource ;
         rdfs:domain         owl:Thing , :Person , rdfs:Resource ;
@@ -338,7 +338,7 @@ rdf:subject  a              rdf:Property , rdfs:Resource ;
         owl:equivalentClass  <http://www.w3.org/2001/XMLSchema#integer> .
 
 <http://www.w3.org/2001/XMLSchema#time>
-        a                 rdfs:Datatype , rdfs:Class , rdfs:Resource , owl:Class ;
+        a                 rdfs:Datatype , rdfs:Resource , rdfs:Class , owl:Class ;
         owl:disjointWith  <http://www.w3.org/2001/XMLSchema#long> , <http://www.w3.org/2001/XMLSchema#byte> , <http://www.w3.org/2001/XMLSchema#unsignedShort> , <http://www.w3.org/2001/XMLSchema#unsignedLong> , <http://www.w3.org/2001/XMLSchema#float> , <http://www.w3.org/2001/XMLSchema#dateTime> , <http://www.w3.org/2001/XMLSchema#int> , <http://www.w3.org/2001/XMLSchema#string> , <http://www.w3.org/2001/XMLSchema#unsignedInt> , <http://www.w3.org/2001/XMLSchema#short> , <http://www.w3.org/2001/XMLSchema#nonNegativeInteger> , <http://www.w3.org/2001/XMLSchema#duration> , <http://www.w3.org/2001/XMLSchema#unsignedByte> , <http://www.w3.org/2001/XMLSchema#date> , <http://www.w3.org/2001/XMLSchema#integer> , <http://www.w3.org/2001/XMLSchema#decimal> , <http://www.w3.org/2001/XMLSchema#boolean> , <http://www.w3.org/2001/XMLSchema#nonPositiveInteger> .
 
 rdfs:Literal  a              rdfs:Class , rdfs:Resource , owl:Class ;
@@ -346,11 +346,11 @@ rdfs:Literal  a              rdfs:Class , rdfs:Resource , owl:Class ;
         owl:equivalentClass  rdfs:Literal .
 
 <http://www.w3.org/2001/XMLSchema#float>
-        a                 rdfs:Datatype , rdfs:Class , rdfs:Resource , owl:Class ;
+        a                 rdfs:Datatype , rdfs:Resource , rdfs:Class , owl:Class ;
         owl:disjointWith  <http://www.w3.org/2001/XMLSchema#long> , <http://www.w3.org/2001/XMLSchema#byte> , <http://www.w3.org/2001/XMLSchema#unsignedShort> , <http://www.w3.org/2001/XMLSchema#time> , <http://www.w3.org/2001/XMLSchema#unsignedLong> , <http://www.w3.org/2001/XMLSchema#dateTime> , <http://www.w3.org/2001/XMLSchema#int> , <http://www.w3.org/2001/XMLSchema#string> , <http://www.w3.org/2001/XMLSchema#unsignedInt> , <http://www.w3.org/2001/XMLSchema#short> , <http://www.w3.org/2001/XMLSchema#nonNegativeInteger> , <http://www.w3.org/2001/XMLSchema#duration> , <http://www.w3.org/2001/XMLSchema#unsignedByte> , <http://www.w3.org/2001/XMLSchema#date> , <http://www.w3.org/2001/XMLSchema#integer> , <http://www.w3.org/2001/XMLSchema#decimal> , <http://www.w3.org/2001/XMLSchema#boolean> , <http://www.w3.org/2001/XMLSchema#nonPositiveInteger> .
 
 :Parent  a                   rdfs:Class , owl:Class , rdfs:Resource ;
-        rdfs:subClassOf      rdfs:Resource , :Parent , owl:Thing , :Person ;
+        rdfs:subClassOf      :Parent , rdfs:Resource , owl:Thing , :Person ;
         owl:equivalentClass  :Parent .
 
 owl:Restriction  a           rdfs:Class , rdfs:Resource , owl:Class ;
@@ -358,7 +358,7 @@ owl:Restriction  a           rdfs:Class , rdfs:Resource , owl:Class ;
         owl:equivalentClass  owl:Restriction .
 
 <http://www.w3.org/2001/XMLSchema#nonPositiveInteger>
-        a                 rdfs:Datatype , rdfs:Class , rdfs:Resource , owl:Class ;
+        a                 rdfs:Datatype , rdfs:Resource , rdfs:Class , owl:Class ;
         owl:disjointWith  <http://www.w3.org/2001/XMLSchema#time> , <http://www.w3.org/2001/XMLSchema#float> , <http://www.w3.org/2001/XMLSchema#dateTime> , <http://www.w3.org/2001/XMLSchema#string> , <http://www.w3.org/2001/XMLSchema#duration> , <http://www.w3.org/2001/XMLSchema#date> , <http://www.w3.org/2001/XMLSchema#boolean> .
 
 :hasParent  a               owl:ObjectProperty , rdf:Property , rdfs:Resource ;
@@ -371,7 +371,7 @@ owl:Restriction  a           rdfs:Class , rdfs:Resource , owl:Class ;
         a       rdfs:Datatype , rdfs:Class , rdfs:Resource .
 
 <http://www.w3.org/2001/XMLSchema#string>
-        a                 rdfs:Datatype , rdfs:Class , rdfs:Resource , owl:Class ;
+        a                 rdfs:Datatype , rdfs:Resource , rdfs:Class , owl:Class ;
         owl:disjointWith  <http://www.w3.org/2001/XMLSchema#long> , <http://www.w3.org/2001/XMLSchema#byte> , <http://www.w3.org/2001/XMLSchema#unsignedShort> , <http://www.w3.org/2001/XMLSchema#time> , <http://www.w3.org/2001/XMLSchema#unsignedLong> , <http://www.w3.org/2001/XMLSchema#float> , <http://www.w3.org/2001/XMLSchema#dateTime> , <http://www.w3.org/2001/XMLSchema#int> , <http://www.w3.org/2001/XMLSchema#unsignedInt> , <http://www.w3.org/2001/XMLSchema#short> , <http://www.w3.org/2001/XMLSchema#nonNegativeInteger> , <http://www.w3.org/2001/XMLSchema#duration> , <http://www.w3.org/2001/XMLSchema#unsignedByte> , <http://www.w3.org/2001/XMLSchema#date> , <http://www.w3.org/2001/XMLSchema#integer> , <http://www.w3.org/2001/XMLSchema#decimal> , <http://www.w3.org/2001/XMLSchema#boolean> , <http://www.w3.org/2001/XMLSchema#nonPositiveInteger> .
 
 :Ann    a           :Person , owl:Thing , rdfs:Resource ;
@@ -380,7 +380,7 @@ owl:Restriction  a           rdfs:Class , rdfs:Resource , owl:Class ;
         :hasParent  :Juliet , :Carl ;
         owl:sameAs  :Ann .
 
-:Juliet  a          :Mother , owl:Thing , :Parent , rdfs:Resource , :Person , :Woman ;
+:Juliet  a          :Mother , owl:Thing , :Parent , :Person , rdfs:Resource , :Woman ;
         :hasChild   :Ann ;
         owl:sameAs  :Juliet .
 
