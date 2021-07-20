@@ -6,6 +6,10 @@
 - **Laboratory 4**: Reasoning with RDFS Semantics. Updated with solutions.
 - **Laboratory 5**: Modelling Ontologies with OWL 2 and Protégé.
 - **Laboratory 6**: Exposing Tabular Data as an RDF-based Knowledge Graph.
+- **Laboratory 7**: Basic OWL 2 RL Reasoning and SPARQL 1.1
+- **Laboratory 8**: Ontology Alignment
+- **Laboratory 9**: Ontology Embeddings with OWL2Vec*
+- **Laboratory 10**: GraphDB, an RDF Database for Knowledge Graphs
 
 ### Dependencies
 
