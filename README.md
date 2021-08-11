@@ -1,4 +1,4 @@
-## Example codes in Java for the 'Semantic Web Technologies and Knowledge Graphs' module
+### Example codes in Java for the [Semantic Web Technologies and Knowledge Graphs](https://github.com/turing-knowledge-graphs/teaching/tree/main/city) module
 
 - **Laboratory 1**: Set up.
 - **Laboratory 2**: Creating simple RDF-based Knowledge Graphs.
